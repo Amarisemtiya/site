@@ -3,24 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AMARISEMTIYA — Система обновления жизни</title>
+    
+    <title>AMARISEMTIYA — Система обновления жизни | Наталья Сем</title>
+    <meta name="description" content="AMARISEMTIYA — система обновления жизни. Энергия, любовь, деньги и гармония без стресса. Восстанови баланс тела и сознания, уверенность, отношения и вдохновение. Реальные результаты с первых дней.">
+    <meta name="keywords" content="AMARISEMTIYA, система обновления жизни, энергия для самореализации, отношения и доход, гармония тела и сознания, личностное развитие, здоровье без лекарств, предназначение, Наталья Сем">
     
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://milki2025.github.io/Amarisemtiya/">
     <meta property="og:title" content="AMARISEMTIYA — Система обновления жизни">
-    <meta property="og:description" content="Реализация, финансовый рост и гармония. Academy и личная работа.">
+    <meta property="og:description" content="Живи в потоке. Баланс, энергия, любовь и финансовая гармония без стресса.">
     <meta property="og:image" content="https://milki2025.github.io/Amarisemtiya/hero-bg.jpg">
     
     <link rel="icon" type="image/png" href="favicon.png">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
-    
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <style>
-        /* --- НАСТРОЙКИ СТИЛЯ --- */
+        /* --- CORE STYLES --- */
         :root {
             --bg-dark: #051419;
             --bg-card: rgba(9, 32, 38, 0.7);
@@ -32,7 +34,6 @@
             --instagram: #E1306C;
             --text-main: #f5f5f5;
             --text-muted: #b8cdd1;
-            --glass: rgba(5, 20, 25, 0.95);
             --font-serif: 'Playfair Display', serif;
             --font-sans: 'Manrope', sans-serif;
         }
@@ -48,72 +49,8 @@
             overflow-x: hidden;
         }
 
-        /* --- АНИМАЦИИ --- */
-        .reveal {
-            opacity: 0;
-            transform: translateY(40px);
-            transition: all 1s ease-out;
-        }
-        .reveal.active {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        /* --- ШАПКА И МЕНЮ --- */
-        header {
-            position: fixed;
-            top: 0; left: 0; width: 100%;
-            padding: 10px 5%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            z-index: 1000;
-            background: rgba(5, 20, 25, 0.7);
-            backdrop-filter: blur(15px);
-            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-            transition: 0.3s;
-        }
-
-        /* ЛОГОТИП */
-        .logo-link img {
-            height: 50px; 
-            width: auto;
-            display: block;
-            transition: transform 0.3s;
-        }
-        .logo-link:hover img {
-            transform: scale(1.05);
-            filter: drop-shadow(0 0 5px rgba(212, 175, 55, 0.5));
-        }
-
-        nav ul {
-            display: flex;
-            list-style: none;
-            gap: 25px;
-            align-items: center;
-        }
-
-        nav a {
-            color: var(--text-main);
-            text-decoration: none;
-            font-size: 0.85rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            transition: color 0.3s;
-        }
-
-        nav a:hover { color: var(--gold); }
-
-        .menu-toggle {
-            display: none;
-            font-size: 1.8rem;
-            color: var(--gold);
-            cursor: pointer;
-            z-index: 1001;
-        }
-
-        /* --- ТИПОГРАФИКА И КОМПОНЕНТЫ --- */
-        h1, h2, h3 { font-family: var(--font-serif); font-weight: 400; }
+        /* --- UTILS --- */
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
         
         .gold-text {
             background: var(--gold-gradient);
@@ -122,12 +59,27 @@
             color: var(--gold);
         }
 
-        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        h1, h2, h3, h4 { font-family: var(--font-serif); font-weight: 400; }
+        
+        .section-title {
+            font-size: clamp(2rem, 4vw, 3rem);
+            text-align: center;
+            margin-bottom: 60px;
+        }
 
-        /* ОСНОВНАЯ КНОПКА */
+        .divider {
+            width: 80px; height: 2px; background: var(--gold); margin: 30px auto;
+        }
+
+        .reveal {
+            opacity: 0; transform: translateY(40px); transition: all 0.8s ease-out;
+        }
+        .reveal.active { opacity: 1; transform: translateY(0); }
+
+        /* --- BUTTONS --- */
         .btn {
             display: inline-block;
-            padding: 16px 25px;
+            padding: 16px 30px;
             background: var(--gold-gradient);
             color: #051419;
             text-decoration: none;
@@ -136,163 +88,122 @@
             text-transform: uppercase;
             letter-spacing: 1px;
             transition: all 0.4s ease;
-            position: relative;
-            z-index: 1;
             margin: 10px 5px;
-            min-width: 180px;
+            min-width: 200px;
             text-align: center;
-            font-size: 0.9rem;
-            border: none;
-            cursor: pointer;
+            border: none; cursor: pointer;
             border-radius: 2px;
         }
-        
         .btn:hover {
             box-shadow: 0 0 25px rgba(212, 175, 55, 0.5);
             transform: translateY(-3px);
             color: #000;
         }
+        
+        .btn-social { background: transparent; color: #fff; border: 1px solid rgba(255,255,255,0.3); }
+        .btn-wa:hover { border-color: var(--whatsapp); background: var(--whatsapp); color: #fff; }
+        .btn-tg:hover { border-color: var(--telegram); background: var(--telegram); color: #fff; }
+        .btn-tt:hover { border-color: var(--tiktok); background: var(--tiktok); color: #fff; }
+        .btn-ig:hover { border-color: #d6249f; background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); color: #fff; }
 
-        /* МАЛЕНЬКАЯ КНОПКА (для разделов услуг) */
-        .btn-sm {
-            padding: 10px 25px;
-            font-size: 0.8rem;
-            background: transparent;
-            border: 1px solid var(--gold);
-            color: var(--gold);
-            margin-top: 20px;
-            min-width: auto;
+        /* --- HEADER --- */
+        header {
+            position: fixed; top: 0; left: 0; width: 100%;
+            padding: 10px 5%;
+            display: flex; justify-content: space-between; align-items: center;
+            z-index: 1000;
+            background: rgba(5, 20, 25, 0.85);
+            backdrop-filter: blur(15px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
         }
-        .btn-sm:hover {
-            background: var(--gold);
-            color: #000;
-            box-shadow: 0 0 15px rgba(212, 175, 55, 0.3);
-        }
+        .logo-link img { height: 50px; width: auto; transition: 0.3s; }
+        .logo-link:hover img { transform: scale(1.05); filter: drop-shadow(0 0 5px rgba(212, 175, 55, 0.5)); }
+        
+        nav ul { display: flex; list-style: none; gap: 25px; align-items: center; }
+        nav a { color: var(--text-main); text-decoration: none; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px; transition: 0.3s; }
+        nav a:hover { color: var(--gold); }
+        .menu-toggle { display: none; font-size: 1.8rem; color: var(--gold); cursor: pointer; }
 
-        /* Стиль кнопок соцсетей */
-        .btn-social {
-            background: transparent;
-            color: #fff;
-            border: 2px solid #fff;
-        }
-        .btn-tg { border-color: var(--telegram); }
-        .btn-tg:hover { background: var(--telegram); box-shadow: 0 0 25px rgba(0, 136, 204, 0.5); color: #fff; border-color: var(--telegram); }
-        .btn-wa { border-color: var(--whatsapp); }
-        .btn-wa:hover { background: var(--whatsapp); box-shadow: 0 0 25px rgba(37, 211, 102, 0.5); color: #fff; border-color: var(--whatsapp); }
-        .btn-tt { border-color: var(--tiktok); }
-        .btn-tt:hover { background: var(--tiktok); box-shadow: 0 0 25px rgba(254, 44, 85, 0.5); color: #fff; border-color: var(--tiktok); }
-        .btn-ig { border-color: var(--instagram); }
-        .btn-ig:hover { 
-            background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); 
-            box-shadow: 0 0 25px rgba(225, 48, 108, 0.5); 
-            color: #fff; 
-            border-color: transparent; 
-        }
-
-        /* --- БЛОКИ КОНТЕНТА --- */
+        /* --- HERO --- */
         .hero {
             height: 100vh;
-            background: linear-gradient(to bottom, rgba(5,20,25,0.3), rgba(5,20,25,1)), 
-                        url('hero-bg.jpg') no-repeat center center/cover;
+            background: linear-gradient(to bottom, rgba(5,20,25,0.3), rgba(5,20,25,1)), url('hero-bg.jpg') center/cover;
             display: flex; align-items: center; justify-content: center; text-align: center;
         }
-        .hero h1 {
-            font-size: clamp(2.5rem, 5vw, 5rem);
-            margin-bottom: 20px; text-transform: uppercase; line-height: 1.1;
-        }
-        .hero .subtitle {
-            font-size: 1.2rem; letter-spacing: 2px; text-transform: uppercase; opacity: 0.9; margin-bottom: 20px;
-        }
+        .hero h1 { font-size: clamp(3rem, 6vw, 6rem); margin-bottom: 20px; text-transform: uppercase; line-height: 1.1; }
+        .hero .subtitle { font-size: 1.2rem; letter-spacing: 3px; text-transform: uppercase; opacity: 0.9; margin-bottom: 20px; }
 
-        .intro {
-            padding: 100px 0;
-            background: url('texture.jpg') no-repeat center center/cover;
-            background-blend-mode: multiply; background-color: rgba(5, 20, 25, 0.94);
-            text-align: center;
-        }
-        .intro p { font-size: 1.3rem; max-width: 800px; margin: 0 auto; color: var(--text-muted); }
+        /* --- INTRO --- */
+        .intro { padding: 100px 0; background: url('texture.jpg') center/cover; background-blend-mode: multiply; background-color: rgba(5, 20, 25, 0.96); text-align: center; }
+        .intro p { font-size: 1.4rem; max-width: 900px; margin: 0 auto; color: var(--text-muted); }
 
-        .benefit-row {
-            display: flex; align-items: center; min-height: 600px;
-        }
-        .benefit-content {
-            flex: 1; padding: 60px; display: flex; flex-direction: column; justify-content: center; align-items: flex-start;
-        }
-        .benefit-image {
-            flex: 1; height: 600px; background-size: cover; background-position: center; width: 100%;
-        }
+        /* --- RESULTS --- */
+        .benefit-row { display: flex; align-items: center; min-height: 500px; }
+        .benefit-content { flex: 1; padding: 60px; display: flex; flex-direction: column; justify-content: center; }
+        .benefit-image { flex: 1; height: 500px; background-size: cover; background-position: center; }
         .benefit-row:nth-child(even) { flex-direction: row-reverse; }
-        .benefit-row h3 { font-size: 2.8rem; margin-bottom: 20px; }
+        .benefit-row h3 { font-size: 2.5rem; margin-bottom: 20px; }
 
-        .state-grid {
-            display: grid; grid-template-columns: 1fr 1fr; gap: 40px; padding: 100px 0;
-        }
-        .state-card {
-            background: var(--bg-card); padding: 50px; border: 1px solid rgba(212, 175, 55, 0.1);
-            text-align: center; transition: 0.3s;
-        }
-        .state-card:hover { border-color: var(--gold); transform: translateY(-5px); }
-        .state-card i { font-size: 2rem; color: var(--gold); margin-bottom: 20px; }
-
-        .reviews-section { padding: 100px 0; background: #06181e; text-align: center; }
-        .reviews-grid {
+        /* --- NEW: PERSONAL CONSULTATION --- */
+        .consultation-section { padding: 100px 0; background: #081b21; }
+        .consultation-intro { text-align: center; max-width: 800px; margin: 0 auto 60px; }
+        
+        .consultation-grid {
             display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px; margin-top: 50px;
+            gap: 30px; margin-bottom: 60px;
         }
-        .review-card {
-            background: rgba(255,255,255,0.03); padding: 40px; text-align: left; border-left: 2px solid var(--gold);
+        .cons-card {
+            background: rgba(255,255,255,0.03); padding: 30px; border-left: 1px solid var(--gold);
+            transition: 0.3s;
         }
-        .review-text { font-style: italic; color: #ccc; margin-bottom: 20px; }
-        .review-author { font-family: var(--font-serif); color: var(--gold); }
+        .cons-card:hover { background: rgba(255,255,255,0.06); transform: translateY(-5px); }
+        .cons-card h4 { color: var(--gold); font-size: 1.3rem; margin-bottom: 15px; }
 
-        .methodology { padding: 100px 0; background: #051419; text-align: center; }
-        .quote-box {
-            margin-top: 50px; padding: 40px; border: 1px solid rgba(212,175,55,0.3);
-            background: radial-gradient(circle at center, rgba(212,175,55,0.05), transparent);
-        }
-        .mission-text { font-family: var(--font-serif); font-size: 1.4rem; font-style: italic; }
+        .process-row { display: flex; flex-wrap: wrap; gap: 50px; align-items: center; margin-top: 80px; }
+        .process-text { flex: 1; min-width: 300px; }
+        .process-img { flex: 1; min-width: 300px; height: 500px; background: url('consultation.jpg') center/cover; border-radius: 4px; box-shadow: 0 20px 50px rgba(0,0,0,0.5); }
+        
+        .process-list li { margin-bottom: 20px; display: flex; align-items: flex-start; }
+        .process-list i { color: var(--gold); margin-right: 15px; margin-top: 5px; }
 
-        /* --- РАЗДЕЛ ACADEMY --- */
+        /* --- NEW: ACADEMY EXPANDED --- */
         .academy-section {
             padding: 120px 0;
-            background: linear-gradient(rgba(5,20,25,0.9), rgba(5,20,25,0.8)), url('texture.jpg');
-            background-size: cover;
-            background-attachment: fixed;
-            text-align: center;
-            border-top: 1px solid rgba(212, 175, 55, 0.1);
-            border-bottom: 1px solid rgba(212, 175, 55, 0.1);
+            background: linear-gradient(rgba(5,20,25,0.92), rgba(5,20,25,0.85)), url('academy-bg.jpg') center/cover fixed;
+            color: #fff;
         }
-        .academy-card {
-            max-width: 800px;
-            margin: 0 auto;
+        .academy-header { text-align: center; margin-bottom: 80px; }
+        
+        .levels-grid {
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 40px; margin: 60px 0;
+        }
+        .level-card {
             background: rgba(5, 20, 25, 0.8);
-            border: 1px solid var(--gold);
-            padding: 60px 40px;
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            padding: 40px; text-align: center;
             backdrop-filter: blur(10px);
-            box-shadow: 0 0 40px rgba(212, 175, 55, 0.1);
+            transition: 0.3s;
+        }
+        .level-card:hover { border-color: var(--gold); transform: scale(1.02); }
+        .stars { color: var(--gold); margin-bottom: 15px; letter-spacing: 5px; }
+        
+        .science-box {
+            background: rgba(212, 175, 55, 0.05);
+            padding: 40px; margin-top: 60px;
+            border-left: 3px solid var(--gold);
         }
 
-        .author-section { display: flex; background: #000; }
-        .author-text { flex: 1; padding: 80px; display: flex; flex-direction: column; justify-content: center; }
-        .author-img { flex: 1; min-height: 600px; background: url('author.jpg') no-repeat center center/cover; filter: sepia(15%); }
+        /* --- CREATOR --- */
+        .author-section { display: flex; background: #000; flex-wrap: wrap; }
+        .author-text { flex: 1; padding: 80px; display: flex; flex-direction: column; justify-content: center; min-width: 300px; }
+        .author-img { flex: 1; min-height: 600px; background: url('author.jpg') center/cover; min-width: 300px; filter: sepia(10%); }
 
-        .steps-section {
-            padding: 120px 20px;
-            background: linear-gradient(rgba(5,20,25,0.9), rgba(5,20,25,0.95)), 
-                        url('hero-bg.jpg') no-repeat center center/cover;
-            text-align: center;
-        }
-        .steps-list { list-style: none; margin: 50px auto; max-width: 600px; text-align: left; }
-        .steps-list li { margin-bottom: 25px; display: flex; align-items: center; font-size: 1.2rem; }
-        .step-num { font-family: var(--font-serif); font-size: 2.5rem; color: var(--gold); margin-right: 20px; }
-
-        /* Footer */
-        footer { background: #02080a; padding: 50px; text-align: center; color: #555; border-top: 1px solid #111; }
-        .footer-link { color: var(--gold); text-decoration: none; transition: 0.3s; }
-        .footer-link:hover { color: #fff; }
-        .footer-item { margin-top: 10px; }
-
-        /* Плавающие кнопки */
+        /* --- FOOTER --- */
+        footer { background: #02080a; padding: 60px 20px; text-align: center; border-top: 1px solid #111; }
+        .legal-note { margin-top: 40px; font-size: 0.75rem; color: #444; max-width: 800px; margin-left: auto; margin-right: auto; line-height: 1.4; }
+        
+        /* --- FLOATING BTNS --- */
         .floating-buttons {
             position: fixed; bottom: 30px; right: 30px; z-index: 999;
             display: flex; flex-direction: column; gap: 15px;
@@ -302,15 +213,14 @@
             display: flex; align-items: center; justify-content: center; font-size: 22px; color: #fff;
             box-shadow: 0 5px 15px rgba(0,0,0,0.3); transition: 0.3s; text-decoration: none;
         }
-        .float-wa { background-color: var(--whatsapp); }
-        .float-tg { background-color: var(--telegram); }
-        .float-tt { background-color: #000; border: 1px solid rgba(255,255,255,0.2); }
+        .float-wa { background: var(--whatsapp); }
+        .float-tg { background: var(--telegram); }
+        .float-tt { background: #000; border: 1px solid rgba(255,255,255,0.2); }
         .float-tt:hover { border-color: var(--tiktok); color: var(--tiktok); }
         .float-ig { background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%); }
-        
         .float-btn:hover { transform: scale(1.1); }
 
-        /* Mobile */
+        /* --- MOBILE --- */
         @media (max-width: 900px) {
             .menu-toggle { display: block; }
             nav {
@@ -318,22 +228,15 @@
                 background: var(--bg-dark);
                 display: flex; align-items: center; justify-content: center;
                 transform: translateX(100%); transition: 0.4s ease;
-                z-index: 1000;
+                z-index: 999;
             }
             nav.active { transform: translateX(0); }
-            nav ul { flex-direction: column; text-align: center; gap: 40px; }
-            nav a { font-size: 1.5rem; }
-
-            .logo-link img { height: 40px; }
-
-            .hero h1 { font-size: 2.5rem; }
-            .benefit-row, .benefit-row:nth-child(even), .author-section { flex-direction: column; }
-            .benefit-image, .author-img { width: 100%; height: 300px; order: -1; }
-            .benefit-content, .author-text { padding: 40px 20px; align-items: center; text-align: center; }
-            .state-grid, .reviews-grid { grid-template-columns: 1fr; }
-            
+            nav ul { flex-direction: column; }
+            .hero h1 { font-size: 2.8rem; }
+            .benefit-row, .benefit-row:nth-child(even), .process-row { flex-direction: column; }
+            .benefit-image, .author-img, .process-img { width: 100%; height: 350px; order: -1; }
+            .benefit-content, .author-text, .process-text { padding: 40px 20px; }
             .btn { width: 100%; margin: 10px 0; }
-            .academy-card { padding: 40px 20px; }
         }
     </style>
 </head>
@@ -341,18 +244,17 @@
 
     <header>
         <a href="#" class="logo-link">
-            <img src="logo.png" alt="Amarisemtiya Logo">
+            <img src="logo.png" alt="AMARISEMTIYA Logo">
         </a>
-        <div class="menu-toggle" onclick="toggleMenu()">
-            <i class="fas fa-bars"></i>
-        </div>
+        <div class="menu-toggle" onclick="toggleMenu()"><i class="fas fa-bars"></i></div>
         <nav id="navbar">
             <ul>
                 <li><a href="#about" onclick="toggleMenu()">О системе</a></li>
                 <li><a href="#results" onclick="toggleMenu()">Результаты</a></li>
+                <li><a href="#consultation" onclick="toggleMenu()">Консультация</a></li>
                 <li><a href="#academy" onclick="toggleMenu()" style="color: var(--gold);">Academy</a></li>
                 <li><a href="#creator" onclick="toggleMenu()">Создатель</a></li>
-                <li><a href="https://forms.gle/GBZRALsUGMYTE9x1A" target="_blank" style="border: 1px solid var(--gold); padding: 8px 20px; border-radius: 20px;" onclick="toggleMenu()">Запись</a></li>
+                <li><a href="#steps" style="border: 1px solid var(--gold); padding: 8px 20px; border-radius: 20px;" onclick="toggleMenu()">Запись</a></li>
             </ul>
         </nav>
     </header>
@@ -363,16 +265,16 @@
             <h1>Amarisemtiya</h1>
             <span class="gold-text" style="font-family: var(--font-serif); font-size: 1.5rem;">Реализация: Ясное понимание своего пути</span>
             <br><br><br>
-            <a href="https://forms.gle/GBZRALsUGMYTE9x1A" class="btn" target="_blank">Заполнить анкету</a>
+            <a href="#steps" class="btn">Начать свой путь</a>
         </div>
     </section>
 
     <section id="about" class="intro">
         <div class="container reveal">
             <p>
-                <strong>AMARISEMTIYA</strong> — это путь к внутреннему и внешнему благополучию. К энергии, деньгам, любви и уверенности без стресса и выгорания.<br><br>
+                <strong>AMARISEMTIYA</strong> — это путь к внутреннему и внешнему благополучию. К энергии, деньгам, любви и уверенности без стресса.<br><br>
                 Здесь ты пробуждаешь потенциал, который влияет на всё: твои решения, доход, отношения и здоровье.<br><br>
-                <span style="color: var(--gold);">Это не философия. Это система действий.</span>
+                <span class="gold-text">Это не философия. Это система действий.</span>
             </p>
         </div>
     </section>
@@ -382,7 +284,6 @@
             <div class="benefit-content reveal">
                 <h3>Финансовый <span class="gold-text">рост</span></h3>
                 <p>Приходит энергия действия и доход. Материальное становится естественным следствием внутреннего состояния.</p>
-                <a href="https://forms.gle/GBZRALsUGMYTE9x1A" class="btn btn-sm" target="_blank">Оставить заявку</a>
             </div>
             <div class="benefit-image" style="background-image: url('finance.jpg');"></div>
         </div>
@@ -391,7 +292,6 @@
             <div class="benefit-content reveal">
                 <h3>Гармония в <span class="gold-text">отношениях</span></h3>
                 <p>Ты становишься услышанным и любимым. Исчезает необходимость доказывать свою ценность.</p>
-                <a href="https://forms.gle/GBZRALsUGMYTE9x1A" class="btn btn-sm" target="_blank">Оставить заявку</a>
             </div>
             <div class="benefit-image" style="background-image: url('relations.jpg');"></div>
         </div>
@@ -400,76 +300,123 @@
             <div class="benefit-content reveal">
                 <h3>Здоровье и <span class="gold-text">легкость</span></h3>
                 <p>Энергия движется свободно. Тело становится союзником, а не источником проблем.</p>
-                <a href="https://forms.gle/GBZRALsUGMYTE9x1A" class="btn btn-sm" target="_blank">Оставить заявку</a>
             </div>
             <div class="benefit-image" style="background-image: url('health.jpg');"></div>
         </div>
+    </section>
 
+    <section id="consultation" class="consultation-section">
         <div class="container">
-            <div class="state-grid">
-                <div class="state-card reveal">
-                    <i class="fas fa-shield-alt"></i>
-                    <h3>Безопасность</h3>
-                    <p>Внутренний комфорт и глубокое ощущение «Я на своем месте».</p>
+            <div class="consultation-intro reveal">
+                <h2 class="section-title">Личная консультация <span class="gold-text">AMARISEMTIYA</span></h2>
+                <p style="font-size: 1.2rem; color: #ddd;">Когда тебе нужен не совет — а реальное улучшение жизни.</p>
+                <div class="divider"></div>
+                <p>Это не просто разговор. Это индивидуальная коррекция состояния, которая помогает вернуть энергию, ясность, спокойствие и способность управлять собой и своей жизнью.</p>
+            </div>
+
+            <div class="consultation-grid reveal">
+                <div class="cons-card">
+                    <h4>Усталость и перегруз</h4>
+                    <p>Находим, где застряло напряжение и какой внутренний конфликт забирает энергию.</p>
                 </div>
-                <div class="state-card reveal">
-                    <i class="fas fa-mountain"></i>
-                    <h3>Опора</h3>
-                    <p>Появляется уверенность, стабильность и четкое направление.</p>
+                <div class="cons-card">
+                    <h4>Долгое отсутствие результата</h4>
+                    <p>Определяем, что блокирует движение и какая программа удерживает старый сценарий.</p>
                 </div>
+                <div class="cons-card">
+                    <h4>Хаос и потеря баланса</h4>
+                    <p>Восстанавливаем ритм нервной системы. Вы ощущаете легкость и внутреннюю тишину.</p>
+                </div>
+                <div class="cons-card">
+                    <h4>Нужен быстрый ответ</h4>
+                    <p>Ясность — что делать, куда двигаться, какие решения приведут к лучшему результату.</p>
+                </div>
+            </div>
+
+            <div class="process-row reveal">
+                <div class="process-text">
+                    <h3 style="margin-bottom: 30px;">Что происходит на сессии?</h3>
+                    <ul class="process-list" style="list-style: none;">
+                        <li><i class="fas fa-check-circle"></i> <div><strong>Определение причины:</strong> Выявляем скрытые факторы (эмоциональные, энергетические), экономя годы поиска.</div></li>
+                        <li><i class="fas fa-check-circle"></i> <div><strong>Снятие напряжения:</strong> Убираем мышечные зажимы и эмоциональные узлы.</div></li>
+                        <li><i class="fas fa-check-circle"></i> <div><strong>Баланс:</strong> Стабилизируем нервную систему и энергетические центры.</div></li>
+                        <li><i class="fas fa-check-circle"></i> <div><strong>Нормализация энергии:</strong> Закрываем утечки и возвращаем силы.</div></li>
+                    </ul>
+                    <p style="margin-top: 30px; color: var(--gold); font-style: italic;">Эффект ощущается в первые 15-20 минут: уходит тревога, возвращается ясность.</p>
+                    <a href="https://wa.me/491778383682?text=Хочу%20записаться%20на%20личную%20консультацию" class="btn" style="margin-top: 30px;">Записаться на консультацию</a>
+                </div>
+                <div class="process-img"></div>
             </div>
         </div>
     </section>
 
-    <section id="reviews" class="reviews-section">
+    <section class="reviews-section" style="padding: 80px 0; background: #06181e; text-align: center;">
         <div class="container reveal">
             <h2 class="gold-text">Истории изменений</h2>
-            <div class="reviews-grid">
-                <div class="review-card">
-                    <p class="review-text">«После первой коррекции ушло чувство постоянной тревоги. Впервые за годы я сплю спокойно и просыпаюсь с энергией действовать.»</p>
-                    <div class="review-author">— Анна К.</div>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 40px;">
+                <div style="background: rgba(255,255,255,0.03); padding: 30px; border-left: 2px solid var(--gold); text-align: left;">
+                    <p style="font-style: italic; color: #ccc;">«После первой коррекции ушло чувство постоянной тревоги. Впервые за годы я сплю спокойно.»</p>
+                    <div style="margin-top: 15px; font-family: var(--font-serif); color: var(--gold);">— Анна К.</div>
                 </div>
-                <div class="review-card">
-                    <p class="review-text">«Финансы сдвинулись с мертвой точки. Я просто перестал бороться с миром и начал видеть возможности, которые были рядом.»</p>
-                    <div class="review-author">— Михаил Д.</div>
+                <div style="background: rgba(255,255,255,0.03); padding: 30px; border-left: 2px solid var(--gold); text-align: left;">
+                    <p style="font-style: italic; color: #ccc;">«Финансы сдвинулись с мертвой точки. Я просто перестал бороться с миром.»</p>
+                    <div style="margin-top: 15px; font-family: var(--font-serif); color: var(--gold);">— Михаил Д.</div>
                 </div>
-                <div class="review-card">
-                    <p class="review-text">«Ощущение тотальной безопасности. Я наконец-то чувствую себя на своем месте. Отношения в семье вышли на новый уровень.»</p>
-                    <div class="review-author">— Елена В.</div>
+                <div style="background: rgba(255,255,255,0.03); padding: 30px; border-left: 2px solid var(--gold); text-align: left;">
+                    <p style="font-style: italic; color: #ccc;">«Ощущение тотальной безопасности. Наконец-то чувствую себя на своем месте.»</p>
+                    <div style="margin-top: 15px; font-family: var(--font-serif); color: var(--gold);">— Елена В.</div>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="methodology">
-        <div class="container reveal">
-            <h2>Про реальные изменения</h2>
-            <br>
-            <p style="max-width: 800px; margin: 0 auto; color: #ccc;">Мы не копаемся в прошлом и не обещаем чудес. Мы включаем систему обновления, которая уже есть в тебе.</p>
-            
-            <div class="quote-box">
-                <h3 style="color:var(--text-main); margin-bottom: 15px;">Миссия</h3>
-                <blockquote class="mission-text">
-                    «Мы создаём культуру внутренней зрелости, где успех, любовь и здоровье — естественные проявления целостного человека.»
-                </blockquote>
             </div>
         </div>
     </section>
 
     <section id="academy" class="academy-section">
-        <div class="container reveal">
-            <div class="academy-card">
-                <h2 style="font-size: 3rem; margin-bottom: 10px;">Academy</h2>
-                <h3 class="gold-text" style="font-family: var(--font-sans); text-transform: uppercase; letter-spacing: 2px; margin-bottom: 40px;">Amarisemtiya</h3>
-                
-                <p style="font-size: 1.5rem; margin-bottom: 30px;">График практикумов</p>
-                
-                <p style="color: var(--text-muted); margin-bottom: 40px;">
-                    Глубокое погружение в методы саморегуляции и управления реальностью. 
-                    Обучение проходит в мини-группах под личным наставничеством.
-                </p>
+        <div class="container">
+            <div class="academy-header reveal">
+                <h2 class="section-title">AMARISEMTIYA <span class="gold-text">Academy</span></h2>
+                <p style="font-size: 1.3rem; max-width: 800px; margin: 0 auto;">Система внутреннего роста, энергетической устойчивости и развития потенциала.</p>
+            </div>
 
-                <a href="https://forms.gle/GBZRALsUGMYTE9x1A" class="btn" target="_blank">Запись на обучение</a>
+            <div class="reveal">
+                <h3 style="text-align: center; color: var(--gold); margin-bottom: 20px;">Философия Академии</h3>
+                <p style="text-align: center; max-width: 700px; margin: 0 auto 50px;">
+                    Мы создаём культуру, где здоровье — естественное состояние, любовь — результат внутренней гармонии, а успех — проявление целостного человека.
+                </p>
+            </div>
+
+            <div class="levels-grid reveal">
+                <div class="level-card">
+                    <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <h3 class="gold-text">LEVEL 1 — STARTER</h3>
+                    <p style="margin: 15px 0; color: #ccc;">Фундамент</p>
+                    <p>Устойчивость, энергия, спокойствие.</p>
+                    <div style="margin-top: 20px; font-size: 0.9rem; opacity: 0.7;">Ранг: Practitioner</div>
+                </div>
+                <div class="level-card">
+                    <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <h3 class="gold-text">LEVEL 2 — ADVANCED</h3>
+                    <p style="margin: 15px 0; color: #ccc;">Расширение</p>
+                    <p>Эмоции, отношения, деньги, уверенность.</p>
+                    <div style="margin-top: 20px; font-size: 0.9rem; opacity: 0.7;">Ранг: Guide</div>
+                </div>
+                <div class="level-card">
+                    <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <h3 class="gold-text">LEVEL 3 — MASTER</h3>
+                    <p style="margin: 15px 0; color: #ccc;">Глубина</p>
+                    <p>Глубинная работа, коррекция, работа с людьми.</p>
+                    <div style="margin-top: 20px; font-size: 0.9rem; opacity: 0.7;">Ранг: Master</div>
+                </div>
+            </div>
+
+            <div class="science-box reveal">
+                <h4>Научно-практическая основа</h4>
+                <p style="margin-top: 15px;">Система объединяет квантовую физику, сакральную геометрию, многомерную коррекцию, науку о движении и энергетическое исцеление. Мы работаем целостно: тело + энергия + эмоции + сознание.</p>
+            </div>
+
+            <div style="text-align: center; margin-top: 60px;" class="reveal">
+                <a href="https://wa.me/491778383682?text=Здравствуйте,%20интересует%20обучение%20в%20Academy" class="btn">Поступить в Академию</a>
+                <br>
+                <span style="font-size: 0.9rem; color: var(--gold); margin-top: 10px; display: block;">Запись в Elite Circle только по приглашению</span>
             </div>
         </div>
     </section>
@@ -481,34 +428,22 @@
             <div style="width: 60px; height: 2px; background: var(--gold); margin: 20px 0;"></div>
             
             <p>Проводник, ментор.</p>
-            <p style="margin-top: 20px;">
-                Создатель <strong>AMARISEMTIYA</strong> — системы пробуждения и активации ядра жизни в этой первозданности и за пределами матрицы мироздания.
-            </p>
-            <p style="margin-top: 20px; color: #bbb;">
-                В основе только научные методы и эффективные результаты.
-            </p>
-            <p style="margin-top: 20px; font-style: italic; color: var(--gold);">
-                Основа: квантовая физика, сакральная геометрия, многомерная коррекция и другие методики, объединившие знания древних культур с инновациями.
-            </p>
+            <p style="margin-top: 20px;">Создатель <strong>AMARISEMTIYA</strong> — системы пробуждения и активации ядра жизни в этой первозданности и за пределами матрицы мироздания.</p>
+            <p style="margin-top: 20px; font-style: italic; color: var(--gold);">Основа: квантовая физика, сакральная геометрия, многомерная коррекция.</p>
         </div>
-        <div class="author-img" style="background-image: url('author.jpg');"></div>
+        <div class="author-img"></div>
     </section>
 
-    <section id="steps" class="steps-section">
+    <section id="steps" style="padding: 100px 20px; background: linear-gradient(rgba(5,20,25,0.9), rgba(5,20,25,0.95)), url('hero-bg.jpg') center/cover; text-align: center;">
         <div class="container reveal">
             <h2>Твоя новая реальность начинается с одного шага</h2>
-            
-            <ul class="steps-list">
-                <li><span class="step-num">1</span> Запишись на первую коррекцию</li>
-                <li><span class="step-num">2</span> Пройди диагностику состояния</li>
-                <li><span class="step-num">3</span> Получи путь восстановления энергии</li>
-            </ul>
-
-            <div style="margin-bottom: 30px;">
-                <a href="https://forms.gle/GBZRALsUGMYTE9x1A" class="btn" style="min-width: 300px; padding: 20px;" target="_blank">Заполнить анкету предзаписи</a>
+            <div style="margin: 40px auto; max-width: 600px; text-align: left;">
+                <p style="margin-bottom: 15px; font-size: 1.2rem;"><span style="color:var(--gold); font-size:1.5rem; margin-right:10px;">1.</span> Запишись на первую коррекцию</p>
+                <p style="margin-bottom: 15px; font-size: 1.2rem;"><span style="color:var(--gold); font-size:1.5rem; margin-right:10px;">2.</span> Пройди диагностику состояния</p>
+                <p style="margin-bottom: 15px; font-size: 1.2rem;"><span style="color:var(--gold); font-size:1.5rem; margin-right:10px;">3.</span> Получи путь восстановления энергии</p>
             </div>
 
-            <div style="margin-top: 20px; display: flex; justify-content: center; flex-wrap: wrap;">
+            <div style="display: flex; justify-content: center; flex-wrap: wrap;">
                 <a href="https://wa.me/491778383682" class="btn btn-social btn-wa" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a>
                 <a href="https://t.me/NataliSem_amarisemtiya" class="btn btn-social btn-tg" target="_blank"><i class="fab fa-telegram-plane"></i> Telegram</a>
                 <a href="https://www.tiktok.com/@amarisemtiya?_r=1&_t=ZM-931NpCZGA5z" class="btn btn-social btn-tt" target="_blank"><i class="fab fa-tiktok"></i> TikTok</a>
@@ -518,42 +453,35 @@
     </section>
 
     <footer>
-        <div class="footer-item">
-            Telegram: <a href="https://t.me/NataliSem_amarisemtiya" class="footer-link">@NataliSem_amarisemtiya</a>
+        <p style="font-size: 1.1rem; color: #fff;">+49 177 8383682</p>
+        
+        <div style="margin-top: 15px;">
+            <a href="https://t.me/NataliSem_amarisemtiya" style="color:var(--gold); text-decoration:none;">@NataliSem_amarisemtiya</a>
+        </div>
+        <div style="margin-top: 5px;">
+            <a href="https://www.instagram.com/amarisemtiya?igsh=aG55eW5nMHM0YWpj" style="color:var(--gold); text-decoration:none;">@amarisemtiya</a>
+        </div>
+        <div style="margin-top: 5px;">
+            <a href="mailto:amarisemtiya@gmail.com" style="color:var(--gold); text-decoration:none;">amarisemtiya@gmail.com</a>
         </div>
         
-        <div class="footer-item">
-            Instagram: <a href="https://www.instagram.com/amarisemtiya?igsh=aG55eW5nMHM0YWpj" class="footer-link" target="_blank">@amarisemtiya</a>
-        </div>
+        <div style="color: var(--gold); margin-top: 15px;"><i class="fas fa-map-marker-alt"></i> Germany</div>
 
-        <div class="footer-item">
-            Email: <a href="mailto:amarisemtiya@gmail.com" class="footer-link">amarisemtiya@gmail.com</a>
-        </div>
-        
-        <div class="footer-item" style="color: var(--gold); margin-top: 15px;">
-            <i class="fas fa-map-marker-alt"></i> Germany
-        </div>
+        <p class="legal-note">
+            AMARISEMTIYA — образовательная и консультативная система в области личностного развития, саморегуляции и устойчивого состояния. Все рекомендации являются инструментами саморазвития и не заменяют медицинские консультации.
+        </p>
 
-        <p style="margin-top: 30px; font-size: 0.8rem; opacity: 0.5;">AMARISEMTIYA © 2025</p>
+        <p style="margin-top: 30px; font-size: 0.8rem; opacity: 0.5;">AMARISEMTIYA © 2026</p>
     </footer>
 
     <div class="floating-buttons">
-        <a href="https://www.instagram.com/amarisemtiya?igsh=aG55eW5nMHM0YWpj" class="float-btn float-ig" target="_blank" title="Instagram">
-            <i class="fab fa-instagram"></i>
-        </a>
-        <a href="https://www.tiktok.com/@amarisemtiya?_r=1&_t=ZM-931NpCZGA5z" class="float-btn float-tt" target="_blank" title="TikTok">
-            <i class="fab fa-tiktok"></i>
-        </a>
-        <a href="https://t.me/NataliSem_amarisemtiya" class="float-btn float-tg" target="_blank" title="Telegram">
-            <i class="fab fa-telegram-plane"></i>
-        </a>
-        <a href="https://wa.me/491778383682" class="float-btn float-wa" target="_blank" title="WhatsApp">
-            <i class="fab fa-whatsapp"></i>
-        </a>
+        <a href="https://www.instagram.com/amarisemtiya?igsh=aG55eW5nMHM0YWpj" class="float-btn float-ig" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.tiktok.com/@amarisemtiya?_r=1&_t=ZM-931NpCZGA5z" class="float-btn float-tt" target="_blank"><i class="fab fa-tiktok"></i></a>
+        <a href="https://t.me/NataliSem_amarisemtiya" class="float-btn float-tg" target="_blank"><i class="fab fa-telegram-plane"></i></a>
+        <a href="https://wa.me/491778383682" class="float-btn float-wa" target="_blank"><i class="fab fa-whatsapp"></i></a>
     </div>
 
     <script>
-        // Анимация при скролле
         window.addEventListener('scroll', reveal);
         function reveal(){
             var reveals = document.querySelectorAll('.reveal');
@@ -568,19 +496,9 @@
         }
         reveal();
 
-        // Мобильное меню
         function toggleMenu() {
             var nav = document.getElementById('navbar');
-            var icon = document.querySelector('.menu-toggle i');
             nav.classList.toggle('active');
-            
-            if (nav.classList.contains('active')) {
-                icon.classList.remove('fa-bars');
-                icon.classList.add('fa-times');
-            } else {
-                icon.classList.remove('fa-times');
-                icon.classList.add('fa-bars');
-            }
         }
     </script>
 
