@@ -209,6 +209,25 @@
             background: linear-gradient(rgba(5,20,25,0.92), rgba(5,20,25,0.85)), url('academy-bg.jpg') center/cover fixed;
             color: #fff;
         }
+        
+        .academy-block { margin-bottom: 50px; text-align: center; }
+        .academy-text-box { max-width: 800px; margin: 0 auto; line-height: 1.8; color: #d0d0d0; }
+        
+        /* Academy Lists */
+        .academy-list { list-style: none; padding: 0; text-align: center; max-width: 700px; margin: 20px auto; }
+        .academy-list li { margin-bottom: 15px; font-size: 1.1rem; }
+        .academy-list li span { color: var(--gold); font-weight: bold; }
+
+        /* Academy Grid (2 columns for Factors, etc) */
+        .academy-grid {
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px; margin: 40px 0; text-align: left;
+        }
+        .academy-col h4 { color: var(--gold); margin-bottom: 20px; font-size: 1.3rem; border-bottom: 1px solid rgba(212,175,55,0.3); padding-bottom: 10px; }
+        .academy-col ul { list-style: none; }
+        .academy-col ul li { margin-bottom: 10px; padding-left: 20px; position: relative; }
+        .academy-col ul li:before { content: '•'; color: var(--gold); position: absolute; left: 0; }
+
         .level-card {
             background: rgba(5, 20, 25, 0.8); border: 1px solid rgba(212, 175, 55, 0.3);
             padding: 40px; text-align: center; backdrop-filter: blur(10px); transition: 0.3s;
@@ -461,9 +480,100 @@
         <div class="container">
             <div class="academy-header reveal">
                 <h2 class="section-title">AMARISEMTIYA <span class="gold-text">Academy</span></h2>
-                <p style="font-size: 1.3rem;">Система внутреннего роста и развития потенциала.</p>
+                <p style="font-size: 1.3rem;">Система внутреннего роста, энергетической устойчивости и развития потенциала.</p>
             </div>
 
+            <div class="academy-block reveal">
+                <div class="academy-text-box">
+                    <p style="margin-bottom: 20px;">AMARISEMTIYA Academy — это пространство, где человек получает новое качество жизни: спокойствие, энергию, уверенность, здоровье, деньги, гармоничные отношения и ясное понимание своего пути.</p>
+                    <p style="margin-bottom: 20px;">Это целостная система управления состоянием, энергией и жизненным направлением, основанная на синергии современных и древних знаний, биофизики, работы внимания, практик многомерной коррекции и уникальных методов диагностики.</p>
+                </div>
+            </div>
+
+            <div class="reveal" style="text-align: center; margin-bottom: 60px;">
+                <h3 class="gold-text" style="margin-bottom: 30px;">Философия AMARISEMTIYA</h3>
+                <ul class="academy-list">
+                    <li>Мы создаём культуру, где:</li>
+                    <li><span>Здоровье</span> — естественное состояние</li>
+                    <li><span>Любовь</span> — результат внутренней гармонии</li>
+                    <li><span>Доход</span> — следствие устойчивого состояния</li>
+                    <li><span>Успех</span> — проявление целостного человека</li>
+                </ul>
+                <p style="color: #bbb; margin-top: 20px;">Это путь от выживания к творению, от хаоса к спокойствию, от сомнений к уверенности.</p>
+            </div>
+            
+            <div class="divider"></div>
+
+            <div class="academy-grid reveal">
+                <div class="academy-col">
+                    <h4>Научно-практическая основа</h4>
+                    <ul>
+                        <li>Квантовая физика</li>
+                        <li>Сакральная геометрия</li>
+                        <li>Многомерная коррекция</li>
+                        <li>Наука о движении человека</li>
+                        <li>Энергетическое исцеление без прикосновения</li>
+                        <li>Древние культуры и современные технологии</li>
+                    </ul>
+                </div>
+                <div class="academy-col">
+                    <h4>Синергия системы</h4>
+                    <p>AMARISEMTIYA восстанавливает человека целостно:</p>
+                    <p style="margin-top: 15px; color: var(--gold); font-size: 1.1rem; line-height: 1.6;">
+                        Тело + Энергия + Эмоции + Сознание + Внутренний ритм + Волновые записи + Энергетические центры
+                    </p>
+                    <p style="margin-top: 15px;">Это даёт быстрый и устойчивый эффект.</p>
+                </div>
+            </div>
+
+            <div class="academy-grid reveal" style="background: rgba(255,255,255,0.03); padding: 30px;">
+                <div class="academy-col">
+                    <h4>Внешние факторы влияния</h4>
+                    <ul>
+                        <li>Стресс среды</li>
+                        <li>Давление социума</li>
+                        <li>Информационный шум</li>
+                        <li>Чужие эмоции</li>
+                        <li>Родовые сценарии</li>
+                    </ul>
+                </div>
+                <div class="academy-col">
+                    <h4>Внутренние факторы влияния</h4>
+                    <ul>
+                        <li>Гормональный фон</li>
+                        <li>Нервная система</li>
+                        <li>Подавленные эмоции</li>
+                        <li>Мышечные паттерны</li>
+                        <li>Энергетические нарушения</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="academy-grid reveal">
+                <div class="academy-col">
+                    <h4>Диагностика AMARISEMTIYA</h4>
+                    <ol style="padding-left: 20px; color: #ccc; line-height: 1.8;">
+                        <li>Эмоционально-поведенческая диагностика</li>
+                        <li>Диагностика чакр и энергетических центров</li>
+                        <li>Диагностика тела и мышечных реакций</li>
+                        <li>Волновая диагностика (радиэстезия + биолокация)</li>
+                        <li>Диагностика внешних влияний</li>
+                    </ol>
+                </div>
+                <div class="academy-col">
+                    <h4>Система исцеления</h4>
+                    <p style="margin-bottom: 10px;">Метод воздействует на:</p>
+                    <ul>
+                        <li>Нервную систему</li>
+                        <li>Органы и чакры</li>
+                        <li>Эмоциональные импульсы</li>
+                        <li>Волновые записи</li>
+                        <li>Первопричины нарушений</li>
+                    </ul>
+                </div>
+            </div>
+
+            <h3 style="text-align: center; margin-top: 80px; margin-bottom: 40px;" class="gold-text reveal">Уровни обучения</h3>
             <div class="levels-grid reveal">
                 <div class="level-card">
                     <h3 class="gold-text">LEVEL 1</h3>
@@ -484,6 +594,8 @@
 
             <div style="text-align: center; margin-top: 50px;" class="reveal">
                 <a href="https://forms.gle/WiA6CzrhGCSEj4kw7" class="btn" target="_blank">Поступить в Академию</a>
+                <br>
+                <span style="font-size: 0.9rem; color: var(--gold); margin-top: 10px; display: block;">Запись в Elite Circle только по приглашению</span>
             </div>
         </div>
     </section>
