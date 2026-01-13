@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AMARISEMTIYA — Система обновления жизни</title>
+    
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://milki2025.github.io/Amarisemtiya/">
+    <meta property="og:title" content="AMARISEMTIYA — Система обновления жизни">
+    <meta property="og:description" content="Реализация, финансовый рост и гармония. Academy и личная работа.">
+    <meta property="og:image" content="https://milki2025.github.io/Amarisemtiya/hero-bg.jpg">
+    
+    <link rel="icon" type="image/png" href="favicon.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        /* --- НАСТРОЙКИ СТИЛЯ --- */
+        :root {
+            --bg-dark: #051419;
+            --bg-card: rgba(9, 32, 38, 0.7);
+            --gold: #d4af37;
+            --gold-gradient: linear-gradient(135deg, #bf953f 0%, #fcf6ba 40%, #b38728 80%, #fbf5b7 100%);
+            --telegram: #0088cc;
+            --whatsapp: #25d366;
+            --tiktok: #fe2c55;
+            --instagram: #E1306C;
+            --text-main: #f5f5f5;
+            --text-muted: #b8cdd1;
+            --glass: rgba(5, 20, 25, 0.95);
+            --font-serif: 'Playfair Display', serif;
+            --font-sans: 'Manrope', sans-serif;
+        }
+
+        html { scroll-behavior: smooth; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            font-family: var(--font-sans);
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+
+        /* --- АНИМАЦИИ --- */
+        .reveal {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: all 1s ease-out;
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* --- ШАПКА И МЕНЮ --- */
+        header {
+            position: fixed;
+            top: 0; left: 0; width: 100%;
+            padding: 10px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+            background: rgba(5, 20, 25, 0.7);
+            backdrop-filter: blur(15px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            transition: 0.3s;
+        }
+
+        /* ЛОГОТИП */
+        .logo-link img {
+            height: 50px; 
+            width: auto;
+            display: block;
+            transition: transform 0.3s;
+        }
+        .logo-link:hover img {
+            transform: scale(1.05);
+            filter: drop-shadow(0 0 5px rgba(212, 175, 55, 0.5));
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 25px;
+            align-items: center;
+        }
+
+        nav a {
+            color: var(--text-main);
+            text-decoration: none;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: color 0.3s;
+        }
+
+        nav a:hover { color: var(--gold); }
+
+        .menu-toggle {
+            display: none;
+            font-size: 1.8rem;
+            color: var(--gold);
+            cursor: pointer;
+            z-index: 1001;
+        }
+
+        /* --- ТИПОГРАФИКА И КОМПОНЕНТЫ --- */
+        h1, h2, h3 { font-family: var(--font-serif); font-weight: 400; }
+        
+        .gold-text {
+            background: var(--gold-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            color: var(--gold);
+        }
+
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+
+        /* ОСНОВНАЯ КНОПКА */
+        .btn {
+            display: inline-block;
+            padding: 16px 25px;
+            background: var(--gold-gradient);
+            color: #051419;
+            text-decoration: none;
+            font-family: var(--font-sans);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.4s ease;
+            position: relative;
+            z-index: 1;
+            margin: 10px 5px;
+            min-width: 180px;
+            text-align: center;
+            font-size: 0.9rem;
+            border: none;
+            cursor: pointer;
+            border-radius: 2px;
+        }
+        
+        .btn:hover {
+            box-shadow: 0 0 25px rgba(212, 175, 55, 0.5);
+            transform: translateY(-3px);
+            color: #000;
+        }
+
+        /* МАЛЕНЬКАЯ КНОПКА (для разделов услуг) */
+        .btn-sm {
+            padding: 10px 25px;
+            font-size: 0.8rem;
+            background: transparent;
+            border: 1px solid var(--gold);
+            color: var(--gold);
+            margin-top: 20px;
+            min-width: auto;
+        }
+        .btn-sm:hover {
+            background: var(--gold);
+            color: #000;
+            box-shadow: 0 0 15px rgba(212, 175, 55, 0.3);
+        }
+
+        /* Стиль кнопок соцсетей */
+        .btn-social {
+            background: transparent;
+            color: #fff;
+            border: 2px solid #fff;
+        }
+        .btn-tg { border-color: var(--telegram); }
+        .btn-tg:hover { background: var(--telegram); box-shadow: 0 0 25px rgba(0, 136, 204, 0.5); color: #fff; border-color: var(--telegram); }
+        .btn-wa { border-color: var(--whatsapp); }
+        .btn-wa:hover { background: var(--whatsapp); box-shadow: 0 0 25px rgba(37, 211, 102, 0.5); color: #fff; border-color: var(--whatsapp); }
+        .btn-tt { border-color: var(--tiktok); }
+        .btn-tt:hover { background: var(--tiktok); box-shadow: 0 0 25px rgba(254, 44, 85, 0.5); color: #fff; border-color: var(--tiktok); }
+        .btn-ig { border-color: var(--instagram); }
+        .btn-ig:hover { 
+            background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); 
+            box-shadow: 0 0 25px rgba(225, 48, 108, 0.5); 
+            color: #fff; 
+            border-color: transparent; 
+        }
+
+        /* --- БЛОКИ КОНТЕНТА --- */
+        .hero {
+            height: 100vh;
+            background: linear-gradient(to bottom, rgba(5,20,25,0.3), rgba(5,20,25,1)), 
+                        url('hero-bg.jpg') no-repeat center center/cover;
+            display: flex; align-items: center; justify-content: center; text-align: center;
+        }
+        .hero h1 {
+            font-size: clamp(2.5rem, 5vw, 5rem);
+            margin-bottom: 20px; text-transform: uppercase; line-height: 1.1;
+        }
+        .hero .subtitle {
+            font-size: 1.2rem; letter-spacing: 2px; text-transform: uppercase; opacity: 0.9; margin-bottom: 20px;
+        }
+
+        .intro {
+            padding: 100px 0;
+            background: url('texture.jpg') no-repeat center center/cover;
+            background-blend-mode: multiply; background-color: rgba(5, 20, 25, 0.94);
+            text-align: center;
+        }
+        .intro p { font-size: 1.3rem; max-width: 800px; margin: 0 auto; color: var(--text-muted); }
+
+        .benefit-row {
+            display: flex; align-items: center; min-height: 600px;
+        }
+        .benefit-content {
+            flex: 1; padding: 60px; display: flex; flex-direction: column; justify-content: center; align-items: flex-start;
+        }
+        .benefit-image {
+            flex: 1; height: 600px; background-size: cover; background-position: center; width: 100%;
+        }
+        .benefit-row:nth-child(even) { flex-direction: row-reverse; }
+        .benefit-row h3 { font-size: 2.8rem; margin-bottom: 20px; }
+
+        .state-grid {
+            display: grid; grid-template-columns: 1fr 1fr; gap: 40px; padding: 100px 0;
+        }
+        .state-card {
+            background: var(--bg-card); padding: 50px; border: 1px solid rgba(212, 175, 55, 0.1);
+            text-align: center; transition: 0.3s;
+        }
+        .state-card:hover { border-color: var(--gold); transform: translateY(-5px); }
+        .state-card i { font-size: 2rem; color: var(--gold); margin-bottom: 20px; }
+
+        .reviews-section { padding: 100px 0; background: #06181e; text-align: center; }
+        .reviews-grid {
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px; margin-top: 50px;
+        }
+        .review-card {
+            background: rgba(255,255,255,0.03); padding: 40px; text-align: left; border-left: 2px solid var(--gold);
+        }
+        .review-text { font-style: italic; color: #ccc; margin-bottom: 20px; }
+        .review-author { font-family: var(--font-serif); color: var(--gold); }
+
+        .methodology { padding: 100px 0; background: #051419; text-align: center; }
+        .quote-box {
+            margin-top: 50px; padding: 40px; border: 1px solid rgba(212,175,55,0.3);
+            background: radial-gradient(circle at center, rgba(212,175,55,0.05), transparent);
+        }
+        .mission-text { font-family: var(--font-serif); font-size: 1.4rem; font-style: italic; }
+
+        /* --- РАЗДЕЛ ACADEMY --- */
+        .academy-section
