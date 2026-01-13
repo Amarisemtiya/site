@@ -47,6 +47,7 @@
             font-family: var(--font-sans);
             line-height: 1.7;
             overflow-x: hidden;
+            top: 0 !important;
         }
 
         /* --- UTILS --- */
@@ -226,6 +227,23 @@
         .cookie-btns { display: flex; gap: 15px; flex-wrap: wrap; }
         .btn-small { padding: 10px 20px; font-size: 0.85rem; border: 1px solid var(--gold); background: var(--gold); color: #000; cursor: pointer; }
         .btn-small-outline { padding: 10px 20px; font-size: 0.85rem; border: 1px solid #fff; background: transparent; color: #fff; cursor: pointer; }
+
+        /* --- FLOATING BUTTONS (FIXED) --- */
+        .floating-buttons {
+            position: fixed; bottom: 30px; right: 20px; z-index: 2000;
+            display: flex; flex-direction: column; gap: 12px;
+        }
+        .float-btn {
+            width: 50px; height: 50px; border-radius: 50%;
+            display: flex; align-items: center; justify-content: center; font-size: 24px; color: #fff;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.4); transition: 0.3s; text-decoration: none;
+        }
+        .float-wa { background: var(--whatsapp); }
+        .float-tg { background: var(--telegram); }
+        .float-tt { background: #000; border: 1px solid rgba(255,255,255,0.2); }
+        .float-tt:hover { border-color: var(--tiktok); color: var(--tiktok); }
+        .float-ig { background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%); }
+        .float-btn:hover { transform: scale(1.1); }
 
         /* --- MOBILE --- */
         @media (max-width: 900px) {
@@ -592,10 +610,10 @@
 
     <section style="padding: 60px 0; text-align: center; background: #051419;">
         <div class="container reveal">
-            <h3 class="gold-text" style="margin-bottom: 30px;">Следите за нами в соцсетях</h3>
+            <h3 class="gold-text" style="margin-bottom: 30px;">Способы связи</h3>
             <div style="display: flex; justify-content: center; flex-wrap: wrap; gap: 15px;">
                 <a href="https://wa.me/491778383682" class="btn btn-social btn-wa" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a>
-                <a href="https://t.me/NataliSem_amarisemtiya" class="btn btn-social btn-tg" target="_blank"><i class="fab fa-telegram-plane"></i> Telegram</a>
+                <a href="https://t.me/+YWRw3w1EL5M4Yjdi" class="btn btn-social btn-tg" target="_blank"><i class="fab fa-telegram-plane"></i> Telegram</a>
                 <a href="https://www.tiktok.com/@amarisemtiya?_r=1&_t=ZM-931NpCZGA5z" class="btn btn-social btn-tt" target="_blank"><i class="fab fa-tiktok"></i> TikTok</a>
                 <a href="https://www.instagram.com/amarisemtiya?igsh=aG55eW5nMHM0YWpj" class="btn btn-social btn-ig" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
             </div>
@@ -604,7 +622,7 @@
 
     <footer>
         <div style="margin-top: 15px;">
-            <a href="https://t.me/NataliSem_amarisemtiya" style="color:var(--gold); text-decoration:none;">@NataliSem_amarisemtiya</a>
+            <a href="https://t.me/+YWRw3w1EL5M4Yjdi" style="color:var(--gold); text-decoration:none;">Telegram канал</a>
         </div>
         <div style="margin-top: 5px;">
             <a href="https://www.instagram.com/amarisemtiya?igsh=aG55eW5nMHM0YWpj" style="color:var(--gold); text-decoration:none;">@amarisemtiya</a>
@@ -638,7 +656,7 @@
     <div class="floating-buttons">
         <a href="https://www.instagram.com/amarisemtiya?igsh=aG55eW5nMHM0YWpj" class="float-btn float-ig" target="_blank"><i class="fab fa-instagram"></i></a>
         <a href="https://www.tiktok.com/@amarisemtiya?_r=1&_t=ZM-931NpCZGA5z" class="float-btn float-tt" target="_blank"><i class="fab fa-tiktok"></i></a>
-        <a href="https://t.me/NataliSem_amarisemtiya" class="float-btn float-tg" target="_blank"><i class="fab fa-telegram-plane"></i></a>
+        <a href="https://t.me/+YWRw3w1EL5M4Yjdi" class="float-btn float-tg" target="_blank"><i class="fab fa-telegram-plane"></i></a>
         <a href="https://wa.me/491778383682" class="float-btn float-wa" target="_blank"><i class="fab fa-whatsapp"></i></a>
     </div>
 
