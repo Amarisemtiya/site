@@ -6,6 +6,7 @@
     
     <title>AMARISEMTIYA — Система обновления жизни | Наталья Сем</title>
     <meta name="description" content="AMARISEMTIYA — система реального обновления жизни. Энергия, финансы, отношения и здоровье. Персональные сессии, практикумы и обучение.">
+    <meta name="keywords" content="AMARISEMTIYA, система обновления жизни, энергия для самореализации, отношения и доход, гармония тела и сознания, личностное развитие, здоровье без лекарств, предназначение, Наталья Сем">
     
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://milki2025.github.io/Amarisemtiya/">
@@ -175,10 +176,29 @@
         
         /* --- CONSULTATION --- */
         .consultation-section { padding: 100px 0; background: #081b21; }
-        .cons-card {
-            background: rgba(255,255,255,0.03); padding: 30px; border-left: 1px solid var(--gold);
-            transition: 0.3s; margin-bottom: 20px;
+        
+        /* Grid for Requests */
+        .requests-grid {
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px; margin: 50px 0;
         }
+        .req-card {
+            background: rgba(255,255,255,0.02); padding: 30px; border-left: 2px solid var(--gold);
+        }
+        .req-card h4 { color: var(--gold); margin-bottom: 15px; font-size: 1.2rem; }
+        .req-card p { font-size: 0.95rem; color: #ccc; }
+
+        /* Process & Unique */
+        .unique-box {
+            border: 1px solid var(--gold); padding: 40px; margin: 60px 0;
+            background: radial-gradient(circle at center, rgba(212,175,55,0.05), transparent);
+            text-align: center;
+        }
+        
+        .results-list { list-style: none; margin-top: 20px; }
+        .results-list li { margin-bottom: 10px; display: flex; align-items: start; }
+        .results-list li:before { content: '✓'; color: var(--gold); margin-right: 15px; font-weight: bold; }
+
         .process-row { display: flex; flex-wrap: wrap; gap: 50px; align-items: center; margin-top: 60px; }
         .process-text { flex: 1; min-width: 300px; }
         .process-img { flex: 1; min-width: 300px; height: 500px; background: url('consultation.jpg') center/cover; border-radius: 4px; box-shadow: 0 20px 50px rgba(0,0,0,0.5); }
@@ -365,19 +385,72 @@
             <div class="consultation-intro reveal">
                 <h2 class="section-title">Личная консультация <span class="gold-text">AMARISEMTIYA</span></h2>
                 <p>Когда тебе нужен не совет — а реальное улучшение жизни.</p>
+                <div class="divider"></div>
+                <p>Это не просто разговор. Это индивидуальная коррекция состояния, которая помогает вернуть энергию, ясность, спокойствие и способность управлять собой и своей жизнью.</p>
+            </div>
+
+            <div class="reveal">
+                <h3 style="text-align: center; margin-top: 60px;">Какие запросы решает консультация</h3>
+                <div class="requests-grid">
+                    <div class="req-card">
+                        <h4>Отношения</h4>
+                        <p>Конфликты, страх близости, отсутствие партнёра, ревность, токсичные связи.</p>
+                    </div>
+                    <div class="req-card">
+                        <h4>Здоровье и самочувствие</h4>
+                        <p>Паника, тревога, бессонница, усталость, психосоматика.</p>
+                    </div>
+                    <div class="req-card">
+                        <h4>Эмоции</h4>
+                        <p>Раздражение, апатия, страхи, обиды, потеря мотивации.</p>
+                    </div>
+                    <div class="req-card">
+                        <h4>Финансы</h4>
+                        <p>Застой, страхи, самосаботаж, отсутствие роста.</p>
+                    </div>
+                    <div class="req-card">
+                        <h4>Предназначение</h4>
+                        <p>Отсутствие направления, пустота, потерянность.</p>
+                    </div>
+                    <div class="req-card">
+                        <h4>Кризисы</h4>
+                        <p>Развод, переезд, потеря опоры, эмоциональный обрыв.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="unique-box reveal">
+                <h3 class="gold-text" style="margin-bottom: 20px;">Почему метод уникален</h3>
+                <p style="max-width: 800px; margin: 0 auto; line-height: 1.8;">
+                    Он объединяет биофизику, энергокоррекцию, работу внимания, многомерность, радиэстезию, биолокацию, эмоциональную перезапись, восстановление природного ритма и понимание причинных импульсов.
+                </p>
             </div>
 
             <div class="process-row reveal">
                 <div class="process-text">
-                    <h3 style="margin-bottom: 20px;">Что происходит на консультации?</h3>
-                    <p style="margin-bottom: 20px;">Это индивидуальная коррекция состояния. Мы находим, где застряло напряжение, какой внутренний конфликт забирает энергию и почему вы "заходите в один и тот же тупик".</p>
-                    
-                    <div class="cons-card">
-                        <h4>Эффект в первые 15–20 минут</h4>
-                        <p style="font-size: 0.9rem;">Люди ощущают: сходящее напряжение, тишину в голове, тепло, исчезновение тревоги, ясность мыслей и возвращение жизненной силы.</p>
-                    </div>
+                    <h3 style="margin-bottom: 20px;">Как проходит консультация</h3>
+                    <p style="margin-bottom: 15px;">
+                        <strong>Онлайн, 45–60 минут</strong>, без камеры при желании, мягко, безопасно, индивидуально. Ты просто сидишь или лежишь в удобной позиции. Работа идёт через внимание, энергию и многомерную коррекцию.
+                    </p>
 
-                    <a href="https://forms.gle/WiA6CzrhGCSEj4kw7" class="btn" target="_blank">Записаться на консультацию</a>
+                    <h3 style="margin-top: 40px; margin-bottom: 20px;">Результаты после 3–5 консультаций</h3>
+                    <ul class="results-list">
+                        <li>Стабилизируется нервная система.</li>
+                        <li>Исчезают повторяющиеся эмоциональные реакции.</li>
+                        <li>Тело расслабляется.</li>
+                        <li>Отношения становятся спокойнее.</li>
+                        <li>Улучшается общение с детьми.</li>
+                        <li>Появляются результаты на работе и растет доход.</li>
+                        <li>Возвращается вдохновение.</li>
+                        <li>Исчезают внутренние конфликты.</li>
+                    </ul>
+                    
+                    <h4 style="margin-top: 40px; color: var(--gold);">Готов(а) почувствовать облегчение, ясность и энергию уже сегодня?</h4>
+                    <div style="margin-top: 20px;">
+                        <a href="https://forms.gle/WiA6CzrhGCSEj4kw7" class="btn" target="_blank">Записаться на консультацию</a>
+                        <br>
+                        <a href="https://forms.gle/WiA6CzrhGCSEj4kw7" style="color: #bbb; font-size: 0.9rem; margin-top: 10px; display: inline-block; text-decoration: underline;" target="_blank">Получить бесплатное первое сканирование</a>
+                    </div>
                 </div>
                 <div class="process-img"></div>
             </div>
@@ -420,8 +493,20 @@
             <h2 class="gold-text">Создатель</h2>
             <h1 style="font-size: 2.5rem; margin-bottom: 20px;">Natalia Sem</h1>
             <div style="width: 60px; height: 2px; background: var(--gold); margin: 20px 0;"></div>
-            <p>Создатель <strong>AMARISEMTIYA</strong> — системы пробуждения и активации ядра жизни.</p>
-            <p style="margin-top: 20px; font-style: italic; color: var(--gold);">Основа: квантовая физика, сакральная геометрия, многомерная коррекция.</p>
+            
+            <p style="font-size: 1.1rem; margin-bottom: 15px;">Проводник, ментор.</p>
+            
+            <p>
+                Создатель <strong>AMARISEMTIYA</strong> — системы пробуждения и активации ядра жизни в этой первозданности и за пределами матрицы мироздания.
+            </p>
+            
+            <p style="margin-top: 15px; color: var(--text-muted);">
+                В основе только научные методы и эффективные результаты.
+            </p>
+
+            <p style="margin-top: 20px; font-style: italic; color: var(--gold);">
+                Основа: квантовая физика, сакральная геометрия, многомерная коррекция и другие практические методики, объединившие знания древних культур с инновациями современного мира.
+            </p>
         </div>
         <div class="author-img"></div>
     </section>
@@ -444,7 +529,7 @@
         </p>
 
         <p style="margin-top: 15px; font-size: 0.8rem;">
-            <a href="privacy.pdf" target="_blank" style="color: #666; text-decoration: none;">Datenschutzerklärung (Privacy Policy)</a>
+            <a href="privacy.pdf" target="_blank" style="color: #666; text-decoration: none;">Политика конфиденциальности</a>
         </p>
 
         <p style="margin-top: 30px; font-size: 0.8rem; opacity: 0.5;">AMARISEMTIYA © 2026</p>
