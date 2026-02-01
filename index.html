@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <title>AMARISEMTIYA — Система обновления жизни | Наталья Сем</title>
-    <meta name="description" content="AMARISEMTIYA — система реального обновления жизни. Энергия, финансы, отношения и здоровье. Персональные сессии, практикумы и обучение.">
-    <meta name="keywords" content="AMARISEMTIYA, система обновления жизни, энергия для самореализации, отношения и доход, гармония тела и сознания, личностное развитие, здоровье без лекарств, предназначение, Наталья Сем">
+    <title>AMARISEMTIYA — Система управления личным ресурсом</title>
+    <meta name="description" content="AMARISEMTIYA — система управления личным ресурсом для жизни в новой стране. Stressmanagement, бизнес-коучинг, устойчивость, мышление и поддержка родителей.">
+    <meta name="keywords" content="AMARISEMTIYA, управление стрессом, иммиграция, бизнес коучинг, устойчивость, воспитание детей, Наталья Сем, личный ресурс">
     
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://milki2025.github.io/Amarisemtiya/">
-    <meta property="og:title" content="AMARISEMTIYA — Система обновления жизни">
-    <meta property="og:description" content="Живи в потоке. Баланс, энергия, любовь и финансовая гармония без стресса.">
+    <meta property="og:title" content="AMARISEMTIYA — Управление личным ресурсом">
+    <meta property="og:description" content="Мы даем инструменты, чтобы вы могли жить, работать и растить детей в новой стране, оставаясь в силе.">
     <meta property="og:image" content="https://milki2025.github.io/Amarisemtiya/hero-bg.jpg">
     
     <link rel="icon" type="image/png" href="favicon.png">
@@ -125,8 +125,8 @@
             transition: 0.3s; border-radius: 4px; min-width: 160px;
         }
         .btn-social i { margin-right: 10px; font-size: 1.2rem; }
-     
-       
+        
+        .btn-wa:hover { border-color: var(--whatsapp); background: var(--whatsapp); color: #fff; box-shadow: 0 0 15px rgba(37, 211, 102, 0.4); }
         .btn-tg:hover { border-color: var(--telegram); background: var(--telegram); color: #fff; box-shadow: 0 0 15px rgba(0, 136, 204, 0.4); }
         .btn-tt:hover { border-color: var(--tiktok); background: var(--tiktok); color: #fff; box-shadow: 0 0 15px rgba(254, 44, 85, 0.4); }
         .btn-ig:hover { border-color: #d6249f; background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); color: #fff; box-shadow: 0 0 15px rgba(225, 48, 108, 0.4); }
@@ -160,13 +160,21 @@
 
         .intro { padding: 100px 0; background: url('texture.jpg') center/cover; background-blend-mode: multiply; background-color: rgba(5, 20, 25, 0.97); text-align: center; }
         .intro p { font-size: 1.3rem; max-width: 900px; margin: 0 auto 30px; color: var(--text-muted); }
-        .intro-list { text-align: left; max-width: 800px; margin: 40px auto; list-style: none; }
-        .intro-list li { margin-bottom: 15px; font-size: 1.1rem; }
         
-        .spheres-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; margin-top: 60px; }
-        .sphere-card { background: rgba(255,255,255,0.03); padding: 30px; border-top: 2px solid var(--gold); text-align: center; transition: 0.3s; }
-        .sphere-card:hover { transform: translateY(-5px); background: rgba(255,255,255,0.05); }
-        .sphere-icon { font-size: 2.5rem; margin-bottom: 20px; }
+        /* --- 5 PILLARS GRID (NEW) --- */
+        .pillars-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 60px; text-align: left; }
+        .pillar-card { 
+            background: rgba(255,255,255,0.03); 
+            padding: 40px 30px; 
+            border-left: 2px solid var(--gold); 
+            transition: 0.3s;
+            height: 100%;
+        }
+        .pillar-card:hover { transform: translateY(-5px); background: rgba(255,255,255,0.05); box-shadow: 0 10px 30px rgba(0,0,0,0.3); }
+        .pillar-num { font-size: 3rem; color: rgba(212, 175, 55, 0.2); font-family: var(--font-serif); font-weight: 700; line-height: 1; margin-bottom: 10px; }
+        .pillar-card h4 { color: var(--gold); font-size: 1.4rem; margin-bottom: 15px; }
+        .pillar-card p { font-size: 1rem; color: #ccc; line-height: 1.6; }
+
 
         .formats-section { padding: 100px 0; background: #06181e; }
         .formats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; margin-top: 50px; }
@@ -193,20 +201,7 @@
         .academy-section { padding: 120px 0; background: linear-gradient(rgba(5,20,25,0.92), rgba(5,20,25,0.85)), url('academy-bg.jpg') center/cover fixed; color: #fff; }
         .academy-block { margin-bottom: 50px; text-align: center; }
         .academy-text-box { max-width: 800px; margin: 0 auto; line-height: 1.8; color: #d0d0d0; }
-        .academy-list { list-style: none; padding: 0; text-align: center; max-width: 700px; margin: 20px auto; }
-        .academy-list li { margin-bottom: 15px; font-size: 1.1rem; }
-        .academy-list li span { color: var(--gold); font-weight: bold; }
-
-        .academy-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; margin: 40px 0; text-align: left; }
-        .academy-col h4 { color: var(--gold); margin-bottom: 20px; font-size: 1.3rem; border-bottom: 1px solid rgba(212,175,55,0.3); padding-bottom: 10px; }
-        .academy-col ul { list-style: none; }
-        .academy-col ul li { margin-bottom: 10px; padding-left: 20px; position: relative; }
-        .academy-col ul li:before { content: '•'; color: var(--gold); position: absolute; left: 0; }
-
-        .levels-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 40px; margin: 60px 0; }
-        .level-card { background: rgba(5, 20, 25, 0.8); border: 1px solid rgba(212, 175, 55, 0.3); padding: 40px; text-align: center; backdrop-filter: blur(10px); transition: 0.3s; }
-        .level-card:hover { border-color: var(--gold); transform: scale(1.02); }
-
+        
         .author-section { display: flex; background: #000; flex-wrap: wrap; }
         .author-text { flex: 1; padding: 80px; display: flex; flex-direction: column; justify-content: center; min-width: 300px; }
         .author-img { flex: 1; min-height: 600px; background: url('author.jpg') center/cover; min-width: 300px; filter: sepia(10%); }
@@ -238,7 +233,7 @@
             display: flex; align-items: center; justify-content: center; font-size: 24px; color: #fff;
             box-shadow: 0 5px 15px rgba(0,0,0,0.4); transition: 0.3s; text-decoration: none;
         }
- 
+        .float-wa { background: var(--whatsapp); }
         .float-tg { background: var(--telegram); }
         .float-tt { background: #000; border: 1px solid rgba(255,255,255,0.2); }
         .float-tt:hover { border-color: var(--tiktok); color: var(--tiktok); }
@@ -257,10 +252,10 @@
             }
             nav.active { transform: translateX(0); }
             nav ul { flex-direction: column; }
-            .hero h1 { font-size: 2.8rem; }
+            .hero h1 { font-size: 2.5rem; }
             .process-row, .author-section { flex-direction: column; }
             .author-img, .process-img { width: 100%; height: 350px; order: -1; }
-            .benefit-content, .author-text, .process-text { padding: 40px 20px; }
+            .pillar-card { min-height: auto; }
             .btn { width: 100%; margin: 10px 0; }
         }
     </style>
@@ -274,7 +269,7 @@
         <div class="menu-toggle" onclick="toggleMenu()"><i class="fas fa-bars"></i></div>
         <nav id="navbar">
             <ul>
-                <li><a href="#about" onclick="toggleMenu()">Система</a></li>
+                <li><a href="#about" onclick="toggleMenu()">Метод</a></li>
                 <li><a href="#formats" onclick="toggleMenu()">Форматы</a></li>
                 <li><a href="#consultation" onclick="toggleMenu()">Консультация</a></li>
                 <li><a href="#academy" onclick="toggleMenu()" style="color: var(--gold);">Academy</a></li>
@@ -286,58 +281,67 @@
 
     <section class="hero">
         <div class="container reveal">
-            <p class="subtitle">Система реального обновления жизни</p>
+            <p class="subtitle">Управление личным ресурсом</p>
             <h1>Amarisemtiya</h1>
-            <span class="gold-text" style="font-family: var(--font-serif); font-size: 1.5rem;">Реализация: Ясное понимание своего пути</span>
+            <span class="gold-text" style="font-family: var(--font-serif); font-size: 1.5rem;">Жить, работать и растить детей в силе</span>
             <br><br><br>
-            <a href="#formats" class="btn">Начать свой путь</a>
+            <a href="#about" class="btn">Узнать о системе</a>
         </div>
     </section>
 
     <section id="about" class="intro">
         <div class="container reveal">
-            <h2 class="section-title">AMARISEMTIYA — Система реального обновления жизни</h2>
+            <h2 class="section-title">AMARISEMTIYA — это система управления личным ресурсом</h2>
             <p>
-                AMARISEMTIYA — это путь к внутреннему и внешнему благополучию. К энергии, деньгам, любви и уверенности без стресса и выгорания.<br>
-                Здесь ты пробуждаешь потенциал, который влияет на всё: твои решения, доход, отношения и здоровье.
+                Мы даем инструменты, чтобы вы могли жить, работать и растить детей в новой стране, оставаясь в силе.<br>
+                Здесь мы соединяем глубину (смыслы) и твердость (результаты).
             </p>
-            <p style="color: var(--gold); font-size: 1.2rem;">Это не философия. Это система действий, которая улучшает твой сценарий жизни.</p>
             
             <div class="divider"></div>
 
-            <h3 style="margin-top: 40px;">Что ты получаешь:</h3>
-            <ul class="intro-list">
-                <li>✅ <strong>Финансовый рост</strong> — приходит энергия действия и доход.</li>
-                <li>✅ <strong>Здоровье и лёгкость</strong> — энергия движется свободно.</li>
-                <li>✅ <strong>Гармония в отношениях</strong> — ты становишься услышанным и любимым.</li>
-                <li>✅ <strong>Уверенность</strong> — появляется опора и направление.</li>
-                <li>✅ <strong>Реализация</strong> — ясное понимание своего пути.</li>
-                <li>✅ <strong>Безопасность</strong> — внутренний комфорт и ощущение «я на своём месте».</li>
-            </ul>
+            <h3 style="margin-top: 40px; margin-bottom: 40px;">Метод строится на 5 опорах:</h3>
+            
+            <div class="pillars-grid">
+                <div class="pillar-card">
+                    <div class="pillar-num">01</div>
+                    <h4>Stressmanagement</h4>
+                    <p style="font-weight: 600; margin-bottom: 5px;">Управление стрессом</p>
+                    <p>Как выключить режим «выживания» и успокоить нервную систему, чтобы принимать верные решения, а не действовать из страха.</p>
+                </div>
 
-            <h3 style="margin-top: 60px;">3 сферы, где всё меняется</h3>
-            <div class="spheres-grid">
-                <div class="sphere-card">
-                    <div class="sphere-icon">💰</div>
-                    <h4>Финансы и реализация</h4>
-                    <p style="font-size: 0.9rem; margin-top: 10px;">Раскрывается внутренний драйв и стратегия дохода.</p>
+                <div class="pillar-card">
+                    <div class="pillar-num">02</div>
+                    <h4>Job & Business Coaching</h4>
+                    <p style="font-weight: 600; margin-bottom: 5px;">Профессиональная уверенность</p>
+                    <p>Помогаю иммигрантам и предпринимателям обрести уверенность, пройти адаптацию и увидеть свои сильные стороны для роста дохода.</p>
                 </div>
-                <div class="sphere-card">
-                    <div class="sphere-icon">❤️</div>
-                    <h4>Любовь и отношения</h4>
-                    <p style="font-size: 0.9rem; margin-top: 10px;">Уходят старые сценарии, появляется уважение и притяжение.</p>
+
+                <div class="pillar-card">
+                    <div class="pillar-num">03</div>
+                    <h4>Resilienz</h4>
+                    <p style="font-weight: 600; margin-bottom: 5px;">Устойчивость</p>
+                    <p>Навык держать удар, быстро восстанавливаться после кризисов и сохранять внутренний стержень в любых обстоятельствах.</p>
                 </div>
-                <div class="sphere-card">
-                    <div class="sphere-icon">🌍</div>
-                    <h4>Жизнь и предназначение</h4>
-                    <p style="font-size: 0.9rem; margin-top: 10px;">Ты видишь, чем действительно хочешь заниматься.</p>
+
+                <div class="pillar-card">
+                    <div class="pillar-num">04</div>
+                    <h4>Mindset</h4>
+                    <p style="font-weight: 600; margin-bottom: 5px;">Мышление</p>
+                    <p>Глубокая работа с ограничивающими убеждениями, которые мешают учить язык, интегрироваться и зарабатывать деньги на новом месте.</p>
+                </div>
+
+                <div class="pillar-card">
+                    <div class="pillar-num">05</div>
+                    <h4>Parents & Children</h4>
+                    <p style="font-weight: 600; margin-bottom: 5px;">Родители и дети</p>
+                    <p>Поддержка родителей. Потому что спокойная мама — это спокойный ребенок. Мы создаем климат в семье, где всем комфортно.</p>
                 </div>
             </div>
 
             <div style="margin-top: 60px; background: rgba(255,255,255,0.02); padding: 30px; border-radius: 4px;">
-                <h4 class="gold-text">Практика AMARISEMTIYA</h4>
+                <h4 class="gold-text">Результат системы</h4>
                 <p style="margin-top: 10px; max-width: 800px; margin-left: auto; margin-right: auto;">
-                    Каждая практика — короткая настройка (5–10 минут в день), которая возвращает энергию. Ты чувствуешь эффект уже после первой сессии: больше сил, уверенности и желания жить по-настоящему.
+                    Вы перестаете бороться с реальностью и начинаете ею управлять. Появляется энергия на карьеру, отношения и счастливое родительство.
                 </p>
             </div>
         </div>
@@ -350,36 +354,35 @@
             <div class="formats-grid">
                 <div class="format-card">
                     <div>
-                        <div class="format-title">Персональная сессия 1:1</div>
-                        <p>Индивидуальная коррекция состояния и направления. Глубокая работа с запросом.</p>
+                        <div class="format-title">Личная стратегия</div>
+                        <p>Индивидуальная работа по внедрению 5 опор в вашу жизнь. Разбор вашей ситуации и план действий.</p>
                     </div>
                 </div>
                 
                 <div class="format-card">
                     <div>
-                        <div class="format-title">Практикум «Обновление энергии»</div>
-                        <p>Групповая работа. Перезапуск тела и мышления. Быстрое восстановление ресурса.</p>
+                        <div class="format-title">Бизнес-Коучинг</div>
+                        <p>Для экспертов и предпринимателей в иммиграции. Адаптация бизнеса и карьеры к новым условиям.</p>
                     </div>
                 </div>
                 
                 <div class="format-card">
                     <div>
-                        <div class="format-title">Программа 21 день</div>
-                        <p>«Жизнь без стресса». Ежедневные микрошаги к новой версии себя и устойчивому состоянию.</p>
+                        <div class="format-title">Программы для родителей</div>
+                        <p>Восстановление ресурса мамы и налаживание контакта с ребенком без криков и стресса.</p>
                     </div>
                 </div>
                 
                 <div class="format-card">
                     <div>
                         <div class="format-title">AMARISEMTIYA Academy</div>
-                        <p>Профессиональное обучение и сертификация для специалистов.</p>
+                        <p>Обучение методу управления ресурсом для себя или для профессиональной деятельности.</p>
                     </div>
                 </div>
             </div>
 
             <div style="margin-top: 60px; text-align: center;">
-                <a href="https://forms.gle/WiA6CzrhGCSEj4kw7" class="btn" target="_blank">Записаться на сессию</a>
-                <a href="https://forms.gle/WiA6CzrhGCSEj4kw7" class="btn btn-outline" target="_blank">Получить программу курсов</a>
+                <a href="https://forms.gle/WiA6CzrhGCSEj4kw7" class="btn" target="_blank">Записаться на диагностику</a>
             </div>
         </div>
     </section>
@@ -387,73 +390,27 @@
     <section id="consultation" class="consultation-section">
         <div class="container">
             <div class="consultation-intro reveal">
-                <h2 class="section-title">Личная консультация <span class="gold-text">AMARISEMTIYA</span></h2>
-                <p>Когда тебе нужен не совет — а реальное улучшение жизни.</p>
+                <h2 class="section-title">Личная консультация</h2>
+                <p>Когда вам нужна не просто теория, а конкретное решение.</p>
                 <div class="divider"></div>
-                <p>Это не просто разговор. Это индивидуальная коррекция состояния, которая помогает вернуть энергию, ясность, спокойствие и способность управлять собой и своей жизнью.</p>
-            </div>
-
-            <div class="reveal">
-                <h3 style="text-align: center; margin-top: 60px;">Какие запросы решает консультация</h3>
-                <div class="requests-grid">
-                    <div class="req-card">
-                        <h4>Отношения</h4>
-                        <p>Конфликты, страх близости, отсутствие партнёра, ревность, токсичные связи.</p>
-                    </div>
-                    <div class="req-card">
-                        <h4>Здоровье и самочувствие</h4>
-                        <p>Паника, тревога, бессонница, усталость, психосоматика.</p>
-                    </div>
-                    <div class="req-card">
-                        <h4>Эмоции</h4>
-                        <p>Раздражение, апатия, страхи, обиды, потеря мотивации.</p>
-                    </div>
-                    <div class="req-card">
-                        <h4>Финансы</h4>
-                        <p>Застой, страхи, самосаботаж, отсутствие роста.</p>
-                    </div>
-                    <div class="req-card">
-                        <h4>Предназначение</h4>
-                        <p>Отсутствие направления, пустота, потерянность.</p>
-                    </div>
-                    <div class="req-card">
-                        <h4>Кризисы</h4>
-                        <p>Развод, переезд, потеря опоры, эмоциональный обрыв.</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="unique-box reveal">
-                <h3 class="gold-text" style="margin-bottom: 20px;">Почему метод уникален</h3>
-                <p style="max-width: 800px; margin: 0 auto; line-height: 1.8;">
-                    Он объединяет биофизику, энергокоррекцию, работу внимания, многомерность, радиэстезию, биолокацию, эмоциональную перезапись, восстановление природного ритма и понимание причинных импульсов.
-                </p>
             </div>
 
             <div class="process-row reveal">
                 <div class="process-text">
-                    <h3 style="margin-bottom: 20px;">Как проходит консультация</h3>
+                    <h3 class="gold-text" style="margin-bottom: 20px;">Как это работает</h3>
                     <p style="margin-bottom: 15px;">
-                        <strong>Онлайн, 45–60 минут</strong>, без камеры при желании, мягко, безопасно, индивидуально. Ты просто сидишь или лежишь в удобной позиции. Работа идёт через внимание, энергию и многомерную коррекцию.
+                        Мы не тратим годы на разговоры. Мы работаем точечно с вашим состоянием и стратегией.
                     </p>
-
-                    <h3 style="margin-top: 40px; margin-bottom: 20px;">Результаты после 3–5 консультаций</h3>
                     <ul class="results-list">
-                        <li>Стабилизируется нервная система.</li>
-                        <li>Исчезают повторяющиеся эмоциональные реакции.</li>
-                        <li>Тело расслабляется.</li>
-                        <li>Отношения становятся спокойнее.</li>
-                        <li>Улучшается общение с детьми.</li>
-                        <li>Появляются результаты на работе и растет доход.</li>
-                        <li>Возвращается вдохновение.</li>
-                        <li>Исчезают внутренние конфликты.</li>
+                        <li>Диагностика уровня стресса и выгорания.</li>
+                        <li>Поиск "утечек" энергии в бизнесе или семье.</li>
+                        <li>Работа с мышлением для снятия барьеров.</li>
+                        <li>Построение пошагового плана адаптации и роста.</li>
                     </ul>
                     
-                    <h4 style="margin-top: 40px; color: var(--gold);">Готов(а) почувствовать облегчение, ясность и энергию уже сегодня?</h4>
+                    <h4 style="margin-top: 40px; color: var(--gold);">Готовы вернуть управление своей жизнью?</h4>
                     <div style="margin-top: 20px;">
-                        <a href="https://forms.gle/WiA6CzrhGCSEj4kw7" class="btn" target="_blank">Получить первую бесплатную консультацию и диагностику</a>
-                        <br>
-                        <a href="https://forms.gle/WiA6CzrhGCSEj4kw7" style="color: #bbb; font-size: 0.9rem; margin-top: 10px; display: inline-block; text-decoration: underline;" target="_blank">Записаться на консультацию</a>
+                        <a href="https://forms.gle/WiA6CzrhGCSEj4kw7" class="btn" target="_blank">Записаться на консультацию</a>
                     </div>
                 </div>
                 <div class="process-img"></div>
@@ -465,144 +422,56 @@
         <div class="container">
             <div class="academy-header reveal">
                 <h2 class="section-title">AMARISEMTIYA <span class="gold-text">Academy</span></h2>
-                <p style="font-size: 1.3rem;">Система внутреннего роста, энергетической устойчивости и развития потенциала.</p>
+                <p style="font-size: 1.3rem;">Обучение навыкам будущего: устойчивость и управление собой.</p>
             </div>
 
             <div class="academy-block reveal">
                 <div class="academy-text-box">
-                    <p style="margin-bottom: 20px;">AMARISEMTIYA Academy — это пространство, где человек получает новое качество жизни: спокойствие, энергию, уверенность, здоровье, деньги, гармоничные отношения и ясное понимание своего пути.</p>
-                    <p style="margin-bottom: 20px;">Это целостная система управления состоянием, энергией и жизненным направлением, основанная на синергии современных и древних знаний, биофизики, работы внимания, практик многомерной коррекции и уникальных методов диагностики.</p>
+                    <p style="margin-bottom: 20px;">В Академии мы учим не просто "успокаиваться". Мы передаем технологию, как оставаться эффективным и счастливым человеком в условиях неопределенности и новой среды.</p>
                 </div>
-            </div>
-
-            <div class="reveal" style="text-align: center; margin-bottom: 60px;">
-                <h3 class="gold-text" style="margin-bottom: 30px;">Философия AMARISEMTIYA</h3>
-                <ul class="academy-list">
-                    <li>Мы создаём культуру, где:</li>
-                    <li><span>Здоровье</span> — естественное состояние</li>
-                    <li><span>Любовь</span> — результат внутренней гармонии</li>
-                    <li><span>Доход</span> — следствие устойчивого состояния</li>
-                    <li><span>Успех</span> — проявление целостного человека</li>
-                </ul>
-                <p style="color: #bbb; margin-top: 20px;">Это путь от выживания к творению, от хаоса к спокойствию, от сомнений к уверенности.</p>
             </div>
             
             <div class="divider"></div>
 
             <div class="academy-grid reveal">
                 <div class="academy-col">
-                    <h4>Научно-практическая основа</h4>
+                    <h4>Для кого</h4>
                     <ul>
-                        <li>Квантовая физика</li>
-                        <li>Сакральная геометрия</li>
-                        <li>Многомерная коррекция</li>
-                        <li>Наука о движении человека</li>
-                        <li>Энергетическое исцеление без прикосновения</li>
-                        <li>Древние культуры и современные технологии</li>
+                        <li>Для тех, кто переехал и строит жизнь с нуля.</li>
+                        <li>Для предпринимателей, которым нужна ясная голова.</li>
+                        <li>Для родителей, желающих счастья своим детям.</li>
+                        <li>Для специалистов помогающих профессий.</li>
                     </ul>
                 </div>
                 <div class="academy-col">
-                    <h4>Синергия системы</h4>
-                    <p>AMARISEMTIYA восстанавливает человека целостно:</p>
-                    <p style="margin-top: 15px; color: var(--gold); font-size: 1.1rem; line-height: 1.6;">
-                        Тело + Энергия + Эмоции + Сознание + Внутренний ритм + Волновые записи + Энергетические центры
-                    </p>
-                    <p style="margin-top: 15px;">Это даёт быстрый и устойчивый эффект.</p>
-                </div>
-            </div>
-
-            <div class="academy-grid reveal" style="background: rgba(255,255,255,0.03); padding: 30px;">
-                <div class="academy-col">
-                    <h4>Внешние факторы влияния</h4>
-                    <ul>
-                        <li>Стресс среды</li>
-                        <li>Давление социума</li>
-                        <li>Информационный шум</li>
-                        <li>Чужие эмоции</li>
-                        <li>Родовые сценарии</li>
+                    <h4>Чему вы научитесь</h4>
+                    <ul style="list-style: none;">
+                        <li>✅ Управлять своей нервной системой.</li>
+                        <li>✅ Находить опору внутри себя, а не во внешнем мире.</li>
+                        <li>✅ Видеть возможности там, где другие видят кризис.</li>
                     </ul>
-                </div>
-                <div class="academy-col">
-                    <h4>Внутренние факторы влияния</h4>
-                    <ul>
-                        <li>Гормональный фон</li>
-                        <li>Нервная система</li>
-                        <li>Подавленные эмоции</li>
-                        <li>Мышечные паттерны</li>
-                        <li>Энергетические нарушения</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="academy-grid reveal">
-                <div class="academy-col">
-                    <h4>Диагностика AMARISEMTIYA</h4>
-                    <ol style="padding-left: 20px; color: #ccc; line-height: 1.8;">
-                        <li>Эмоционально-поведенческая диагностика</li>
-                        <li>Диагностика чакр и энергетических центров</li>
-                        <li>Диагностика тела и мышечных реакций</li>
-                        <li>Волновая диагностика (радиэстезия + биолокация)</li>
-                        <li>Диагностика внешних влияний</li>
-                    </ol>
-                </div>
-                <div class="academy-col">
-                    <h4>Система исцеления</h4>
-                    <p style="margin-bottom: 10px;">Метод воздействует на:</p>
-                    <ul>
-                        <li>Нервную систему</li>
-                        <li>Органы и чакры</li>
-                        <li>Эмоциональные импульсы</li>
-                        <li>Волновые записи</li>
-                        <li>Первопричины нарушений</li>
-                    </ul>
-                </div>
-            </div>
-
-            <h3 style="text-align: center; margin-top: 80px; margin-bottom: 40px;" class="gold-text reveal">Уровни обучения</h3>
-            <div class="levels-grid reveal">
-                <div class="level-card">
-                    <h3 class="gold-text">LEVEL 1</h3>
-                    <p style="margin: 10px 0;">STARTER</p>
-                    <p style="font-size: 0.9rem;">Устойчивость, энергия, спокойствие.</p>
-                </div>
-                <div class="level-card">
-                    <h3 class="gold-text">LEVEL 2</h3>
-                    <p style="margin: 10px 0;">ADVANCED</p>
-                    <p style="font-size: 0.9rem;">Эмоции, отношения, деньги.</p>
-                </div>
-                <div class="level-card">
-                    <h3 class="gold-text">LEVEL 3</h3>
-                    <p style="margin: 10px 0;">MASTER</p>
-                    <p style="font-size: 0.9rem;">Глубинная коррекция, работа с людьми.</p>
                 </div>
             </div>
 
             <div style="text-align: center; margin-top: 50px;" class="reveal">
-                <a href="https://forms.gle/WiA6CzrhGCSEj4kw7" class="btn" target="_blank">Поступить в Академию</a>
-                <br>
-                <span style="font-size: 0.9rem; color: var(--gold); margin-top: 10px; display: block;">Запись в Elite Circle только по приглашению</span>
+                <a href="https://forms.gle/WiA6CzrhGCSEj4kw7" class="btn" target="_blank">Узнать о программах обучения</a>
             </div>
         </div>
     </section>
 
     <section id="creator" class="author-section">
         <div class="author-text reveal">
-            <h2 class="gold-text">Создатель</h2>
+            <h2 class="gold-text">Создатель системы</h2>
             <h1 style="font-size: 2.5rem; margin-bottom: 20px;">Amara Sem</h1>
             <div style="width: 60px; height: 2px; background: var(--gold); margin: 20px 0;"></div>
             
-            <p style="font-size: 1.1rem; margin-bottom: 15px;">Проводник, ментор.</p>
+            <p style="font-size: 1.1rem; margin-bottom: 15px;">Эксперт по управлению личным ресурсом.</p>
             
             <p>
-                Создатель <strong>AMARISEMTIYA</strong> — системы пробуждения и активации ядра жизни в этой первозданности и за пределами матрицы мироздания.
+                Я создала <strong>AMARISEMTIYA</strong>, чтобы объединить глубинные знания о человеке с твердыми результатами в материальном мире. 
             </p>
-            
-            <p style="margin-top: 15px; color: var(--text-muted);">
-                В основе только научные методы и эффективные результаты.
-            </p>
-
-            <p style="margin-top: 20px; font-style: italic; color: var(--gold);">
-                Основа: квантовая физика, сакральная геометрия, многомерная коррекция и другие практические методики, объединившие знания древних культур с инновациями современного мира.
+            <p style="margin-top: 15px;">
+                Моя цель — помочь вам обрести профессиональную уверенность и семейное спокойствие в любой точке мира.
             </p>
         </div>
         <div class="author-img"></div>
@@ -610,10 +479,10 @@
 
     <section style="padding: 60px 0; text-align: center; background: #051419;">
         <div class="container reveal">
-            <h3 class="gold-text" style="margin-bottom: 30px;">Способы связи</h3>
+            <h3 class="gold-text" style="margin-bottom: 30px;">Связаться со мной</h3>
             <div style="display: flex; justify-content: center; flex-wrap: wrap; gap: 15px;">
-               
-                <a href="https://t.me/AmaraSem_amarisemtiya" class="btn btn-social btn-tg" target="_blank"><i class="fab fa-telegram-plane"></i> Telegram</a>
+                <a href="https://wa.me/491778383682" class="btn btn-social btn-wa" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+                <a href="https://t.me/+YWRw3w1EL5M4Yjdi" class="btn btn-social btn-tg" target="_blank"><i class="fab fa-telegram-plane"></i> Telegram</a>
                 <a href="https://www.tiktok.com/@amarisemtiya?_r=1&_t=ZM-931NpCZGA5z" class="btn btn-social btn-tt" target="_blank"><i class="fab fa-tiktok"></i> TikTok</a>
                 <a href="https://www.instagram.com/amarisemtiya?igsh=aG55eW5nMHM0YWpj" class="btn btn-social btn-ig" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
             </div>
@@ -656,15 +525,14 @@
     <div class="floating-buttons">
         <a href="https://www.instagram.com/amarisemtiya?igsh=aG55eW5nMHM0YWpj" class="float-btn float-ig" target="_blank"><i class="fab fa-instagram"></i></a>
         <a href="https://www.tiktok.com/@amarisemtiya?_r=1&_t=ZM-931NpCZGA5z" class="float-btn float-tt" target="_blank"><i class="fab fa-tiktok"></i></a>
-        <a href="https://t.me/AmaraSem_amarisemtiya" class="float-btn float-tg" target="_blank"><i class="fab fa-telegram-plane"></i></a>
-        
-        
+        <a href="https://t.me/+YWRw3w1EL5M4Yjdi" class="float-btn float-tg" target="_blank"><i class="fab fa-telegram-plane"></i></a>
+        <a href="https://wa.me/491778383682" class="float-btn float-wa" target="_blank"><i class="fab fa-whatsapp"></i></a>
     </div>
 
     <script>
         // Reveal Animation
         window.addEventListener('scroll', reveal);
-        window.addEventListener('load', reveal); // Ensure elements reveal on load too
+        window.addEventListener('load', reveal); 
         
         function reveal(){
             var reveals = document.querySelectorAll('.reveal');
@@ -673,14 +541,12 @@
                 var revealtop = reveals[i].getBoundingClientRect().top;
                 var revealpoint = 100;
                 
-                // If element is already visible or nearly visible
                 if(revealtop < windowheight - revealpoint){
                     reveals[i].classList.add('active');
                 }
             }
         }
         
-        // Force reveal after 1 second to prevent "hanging" text
         setTimeout(function() {
             var reveals = document.querySelectorAll('.reveal');
             reveals.forEach(el => el.classList.add('active'));
@@ -712,9 +578,3 @@
 
 </body>
 </html>
-
-
-
-
-
-
