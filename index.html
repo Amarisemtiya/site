@@ -12,13 +12,14 @@
     <meta property="og:url" content="https://milki2025.github.io/Amarisemtiya/">
     <meta property="og:title" content="AMARISEMTIYA — Управление личным ресурсом">
     <meta property="og:description" content="Мы даем инструменты, чтобы вы могли жить, работать и растить детей в новой стране, оставаясь в силе.">
-    <meta property="og:image" content="https://milki2025.github.io/Amarisemtiya/hero-bg.jpg">
+    <meta property="og:image" content="hero-bg.jpg">
     
     <link rel="icon" type="image/png" href="favicon.png">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <style>
@@ -46,7 +47,7 @@
             font-family: var(--font-sans);
             line-height: 1.7;
             overflow-x: hidden;
-            top: 0 !important;
+            width: 100%;
         }
 
         /* --- UTILS --- */
@@ -69,6 +70,10 @@
 
         .divider {
             width: 80px; height: 2px; background: var(--gold); margin: 30px auto;
+        }
+        
+        .gold-line {
+             width: 100%; height: 1px; background: linear-gradient(to right, transparent, var(--gold), transparent); margin: 40px 0; opacity: 0.5;
         }
 
         /* Animation Classes */
@@ -150,13 +155,19 @@
         /* --- SECTIONS --- */
         .hero {
             height: 100vh;
+            /* ВАЖНО: Убедитесь, что файл hero-bg.jpg лежит в той же папке */
             background: linear-gradient(to bottom, rgba(5,20,25,0.4), rgba(5,20,25,1)), url('hero-bg.jpg') center/cover;
             display: flex; align-items: center; justify-content: center; text-align: center;
+            position: relative;
         }
         .hero h1 { font-size: clamp(3rem, 6vw, 6rem); margin-bottom: 20px; text-transform: uppercase; line-height: 1.1; }
         .hero .subtitle { font-size: 1.2rem; letter-spacing: 3px; text-transform: uppercase; opacity: 0.9; margin-bottom: 20px; }
 
-        .intro { padding: 100px 0; background: url('texture.jpg') center/cover; background-blend-mode: multiply; background-color: rgba(5, 20, 25, 0.97); text-align: center; }
+        .intro { 
+            padding: 100px 0; 
+            background-color: rgba(5, 20, 25, 0.97); 
+            text-align: center; 
+        }
         .intro p { font-size: 1.3rem; max-width: 900px; margin: 0 auto 30px; color: var(--text-muted); }
         
         /* --- 5 PILLARS GRID --- */
@@ -199,28 +210,35 @@
         .format-card:hover { border-color: var(--gold); box-shadow: 0 10px 30px rgba(0,0,0,0.3); transform: translateY(-5px); }
         .format-title { color: var(--gold); font-size: 1.4rem; font-family: var(--font-serif); margin-bottom: 15px; }
         
+        /* --- CONSULTATION SECTION --- */
         .consultation-section { padding: 100px 0; background: #081b21; }
-        .requests-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin: 50px 0; }
-        .req-card { background: rgba(255,255,255,0.02); padding: 30px; border-left: 2px solid var(--gold); }
-        .req-card h4 { color: var(--gold); margin-bottom: 15px; font-size: 1.2rem; }
-        .req-card p { font-size: 0.95rem; color: #ccc; }
-
-        .unique-box { border: 1px solid var(--gold); padding: 40px; margin: 60px 0; background: radial-gradient(circle at center, rgba(212,175,55,0.05), transparent); text-align: center; }
-        
-        .results-list { list-style: none; margin-top: 20px; }
-        .results-list li { margin-bottom: 10px; display: flex; align-items: start; }
-        .results-list li:before { content: '✓'; color: var(--gold); margin-right: 15px; font-weight: bold; }
-
         .process-row { display: flex; flex-wrap: wrap; gap: 50px; align-items: center; margin-top: 60px; }
-        .process-text { flex: 1; min-width: 300px; }
-        .process-img { flex: 1; min-width: 300px; height: 500px; background: url('consultation.jpg') center/cover; border-radius: 4px; box-shadow: 0 20px 50px rgba(0,0,0,0.5); }
+        .process-text { flex: 1; min-width: 300px; background: rgba(5, 20, 25, 0.6); padding: 40px; border-radius: 4px; backdrop-filter: blur(5px); border: 1px solid rgba(212, 175, 55, 0.1); }
+        /* ВАЖНО: Убедитесь, что файл consultation.jpg лежит в папке */
+        .process-img { flex: 1; min-width: 300px; height: 650px; background: url('consultation.jpg') center/cover; border-radius: 4px; box-shadow: 0 20px 50px rgba(0,0,0,0.5); }
+        
+        .results-list { list-style: none; margin-top: 25px; }
+        .results-list li { margin-bottom: 15px; display: flex; align-items: start; font-size: 1.05rem; }
+        .results-list li:before { content: '✓'; color: var(--gold); margin-right: 15px; font-weight: bold; }
+        
+        .requests-list { list-style: none; margin-top: 20px; padding-left: 20px; }
+        .requests-list li { margin-bottom: 10px; position: relative; color: #ccc; }
+        .requests-list li:before { content: '•'; color: var(--gold); position: absolute; left: -20px; font-size: 1.2rem; line-height: 1; }
 
-        .academy-section { padding: 120px 0; background: linear-gradient(rgba(5,20,25,0.92), rgba(5,20,25,0.85)), url('academy-bg.jpg') center/cover fixed; color: #fff; }
+        /* --- ACADEMY --- */
+        .academy-section { 
+            padding: 120px 0; 
+            /* ВАЖНО: Убедитесь, что файл academy-bg.jpg лежит в папке */
+            background: linear-gradient(rgba(5,20,25,0.92), rgba(5,20,25,0.85)), url('academy-bg.jpg') center/cover fixed; 
+            color: #fff; 
+        }
         .academy-block { margin-bottom: 50px; text-align: center; }
         .academy-text-box { max-width: 800px; margin: 0 auto; line-height: 1.8; color: #d0d0d0; }
         
+        /* --- AUTHOR --- */
         .author-section { display: flex; background: #000; flex-wrap: wrap; }
         .author-text { flex: 1; padding: 80px; display: flex; flex-direction: column; justify-content: center; min-width: 300px; }
+        /* ВАЖНО: Убедитесь, что файл author.jpg лежит в папке */
         .author-img { flex: 1; min-height: 600px; background: url('author.jpg') center/cover; min-width: 300px; filter: sepia(10%); }
 
         /* --- FOOTER --- */
@@ -270,10 +288,11 @@
             nav ul { flex-direction: column; }
             .hero h1 { font-size: 2.5rem; }
             .process-row, .author-section { flex-direction: column; }
-            .author-img, .process-img { width: 100%; height: 350px; order: -1; }
+            .author-img, .process-img { width: 100%; height: 400px; order: -1; }
             .pillar-card, .audience-card { min-height: auto; }
             .btn { width: 100%; margin: 10px 0; }
             .aud-minor-card { flex-direction: column; text-align: center; }
+            .process-text { padding: 30px 20px; }
         }
     </style>
 </head>
@@ -370,7 +389,7 @@
             <h2 class="section-title">Для кого мы создали <span class="gold-text">Amarisemtiya Academy</span></h2>
             
             <p class="audience-intro">
-                Мы создали это не для «успешного успеха», а для реальной жизни. Жизни, где есть переезды, стресс, языковые барьеры и поиск себя в новых обстоятельствах.<br>
+                Мы создали Amarisemtiya Academy не для «успешного успеха», а для реальной жизни. Жизни, где есть переезды, стресс, языковые барьеры и поиск себя в новых обстоятельствах.<br>
                 Мы соединяем глубину (работу с состоянием и мышлением) и твердость (практические инструменты для адаптации и роста).
             </p>
             
@@ -417,4 +436,271 @@
                     <p class="aud-main-desc">Когда старая жизнь рухнула, а новая еще не построена.</p>
                     <ul class="aud-list">
                         <li><span>▪️ В состоянии трансформации:</span> Развод, увольнение, резкая смена статуса или потеря ориентиров.</li>
-                        <li><span>▪️ Помогающие практики:</span> Психологи
+                        <li><span>▪️ Помогающие практики:</span> Психологи, коучи и эзотерики, которым самим нужна профессиональная опора и психогигиена («сапожники без сапог»).</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="audience-minor-grid">
+                <div class="aud-minor-card">
+                    <div class="aud-icon-small">🤦‍♀️🤦</div>
+                    <div>
+                        <h4>Студенты</h4>
+                        <p>Страх экзаменов, давление социума и потерянность.</p>
+                    </div>
+                </div>
+                <div class="aud-minor-card">
+                    <div class="aud-icon-small">👴</div>
+                    <div>
+                        <h4>Люди 50+</h4>
+                        <p>Кто сталкивается с эйджизмом, страхом технологий и ощущением «я устарел».</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="formats" class="formats-section">
+        <div class="container reveal">
+            <h2 class="section-title">Форматы взаимодействия</h2>
+            
+            <div class="formats-grid">
+                <div class="format-card">
+                    <div>
+                        <div class="format-title">Личная стратегия</div>
+                        <p>Индивидуальная работа по внедрению 5 опор в вашу жизнь. Разбор вашей ситуации и план действий.</p>
+                    </div>
+                </div>
+                
+                <div class="format-card">
+                    <div>
+                        <div class="format-title">Бизнес-Коучинг</div>
+                        <p>Для экспертов и предпринимателей в иммиграции. Адаптация бизнеса и карьеры к новым условиям.</p>
+                    </div>
+                </div>
+                
+                <div class="format-card">
+                    <div>
+                        <div class="format-title">Программы для родителей</div>
+                        <p>Восстановление ресурса мамы и налаживание контакта с ребенком без криков и стресса.</p>
+                    </div>
+                </div>
+                
+                <div class="format-card">
+                    <div>
+                        <div class="format-title">AMARISEMTIYA Academy</div>
+                        <p>Обучение методу управления ресурсом для себя или для профессиональной деятельности.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div style="margin-top: 60px; text-align: center;">
+                <a href="https://forms.gle/WiA6CzrhGCSEj4kw7" class="btn" target="_blank">Записаться на диагностику</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="consultation" class="consultation-section">
+        <div class="container">
+            <div class="consultation-intro reveal">
+                <h2 class="section-title">Индивидуальная консультация</h2>
+                <p>Когда вам нужна не просто теория, а конкретное решение.</p>
+                <div class="divider"></div>
+            </div>
+
+            <div class="process-row reveal">
+                <div class="process-text">
+                    <h3 class="gold-text" style="margin-bottom: 20px;">Как проходит консультация?</h3>
+                    <p style="margin-bottom: 15px; font-size: 1.1rem;">
+                        Мы работаем не с абстрактными темами, а с вашим состоянием, мышлением и текущей жизненной ситуацией.
+                    </p>
+                    
+                    <h4 style="margin-top: 30px; margin-bottom: 15px;">В ходе консультации вы получаете:</h4>
+                    <ul class="results-list">
+                        <li>Ясную картину вашего состояния и причин стресса.</li>
+                        <li>Понимание, где именно и почему вы теряете энергию.</li>
+                        <li>Работа с внутренними блоками и установками.</li>
+                        <li>Конкретный пошаговый план действий и адаптации.</li>
+                        <li>Ощущение опоры, контроля и выход из состояния апатии.</li>
+                    </ul>
+                    
+                    <div class="gold-line"></div>
+
+                    <h4 style="margin-bottom: 15px;">С какими запросами чаще всего приходят:</h4>
+                    <ul class="requests-list">
+                        <li>хронический стресс и усталость</li>
+                        <li>выгорание в работе или бизнесе</li>
+                        <li>потеря опоры в эмиграции</li>
+                        <li>сложности с принятием решений и направлением</li>
+                        <li>тревожность и внутреннее напряжение</li>
+                        <li>сложный переходный этап жизни</li>
+                    </ul>
+                    
+                    <div style="margin-top: 50px; text-align: center;">
+                        <a href="https://forms.gle/WiA6CzrhGCSEj4kw7" class="btn" target="_blank" style="width: 100%;">Записаться на индивидуальную консультацию</a>
+                        <p style="font-size: 0.8rem; color: var(--text-muted); margin-top: 10px;">Онлайн · конфиденциально · по предварительной записи</p>
+                    </div>
+                </div>
+                <div class="process-img"></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="academy" class="academy-section">
+        <div class="container">
+            <div class="academy-header reveal">
+                <h2 class="section-title">AMARISEMTIYA <span class="gold-text">Academy</span></h2>
+                <p style="font-size: 1.3rem;">Обучение навыкам будущего: устойчивость и управление собой.</p>
+            </div>
+
+            <div class="academy-block reveal">
+                <div class="academy-text-box">
+                    <p style="margin-bottom: 20px;">В Академии мы учим не просто "успокаиваться". Мы передаем технологию, как оставаться эффективным и счастливым человеком в условиях неопределенности и новой среды.</p>
+                </div>
+            </div>
+            
+            <div class="divider"></div>
+
+            <div class="academy-grid reveal">
+                <div class="academy-col">
+                    <h4>Для кого</h4>
+                    <ul>
+                        <li>Для тех, кто переехал и строит жизнь с нуля.</li>
+                        <li>Для предпринимателей, которым нужна ясная голова.</li>
+                        <li>Для родителей, желающих счастья своим детям.</li>
+                        <li>Для специалистов помогающих профессий.</li>
+                    </ul>
+                </div>
+                <div class="academy-col">
+                    <h4>Чему вы научитесь</h4>
+                    <ul style="list-style: none;">
+                        <li>✅ Управлять своей нервной системой.</li>
+                        <li>✅ Находить опору внутри себя, а не во внешнем мире.</li>
+                        <li>✅ Видеть возможности там, где другие видят кризис.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div style="text-align: center; margin-top: 50px;" class="reveal">
+                <a href="https://forms.gle/WiA6CzrhGCSEj4kw7" class="btn" target="_blank">Узнать о программах обучения</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="creator" class="author-section">
+        <div class="author-text reveal">
+            <h2 class="gold-text">Создатель системы</h2>
+            <h1 style="font-size: 2.5rem; margin-bottom: 20px;">Amara Sem</h1>
+            <div style="width: 60px; height: 2px; background: var(--gold); margin: 20px 0;"></div>
+            
+            <p style="font-size: 1.1rem; margin-bottom: 15px;">Эксперт по управлению личным ресурсом.</p>
+            
+            <p>
+                Я создала <strong>AMARISEMTIYA</strong>, чтобы объединить глубинные знания о человеке с твердыми результатами в материальном мире. 
+            </p>
+            <p style="margin-top: 15px;">
+                Моя цель — помочь вам обрести профессиональную уверенность и семейное спокойствие в любой точке мира.
+            </p>
+        </div>
+        <div class="author-img"></div>
+    </section>
+
+    <section style="padding: 60px 0; text-align: center; background: #051419;">
+        <div class="container reveal">
+            <h3 class="gold-text" style="margin-bottom: 30px;">Связаться со мной</h3>
+            <div style="display: flex; justify-content: center; flex-wrap: wrap; gap: 15px;">
+                <a href="https://t.me/+YWRw3w1EL5M4Yjdi" class="btn btn-social btn-tg" target="_blank"><i class="fab fa-telegram-plane"></i> Telegram</a>
+                <a href="https://www.tiktok.com/@amarisemtiya?_r=1&_t=ZM-931NpCZGA5z" class="btn btn-social btn-tt" target="_blank"><i class="fab fa-tiktok"></i> TikTok</a>
+                <a href="https://www.instagram.com/amarisemtiya?igsh=aG55eW5nMHM0YWpj" class="btn btn-social btn-ig" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div style="margin-top: 15px;">
+            <a href="https://t.me/+YWRw3w1EL5M4Yjdi" style="color:var(--gold); text-decoration:none;">Telegram канал</a>
+        </div>
+        <div style="margin-top: 5px;">
+            <a href="https://www.instagram.com/amarisemtiya?igsh=aG55eW5nMHM0YWpj" style="color:var(--gold); text-decoration:none;">@amarisemtiya</a>
+        </div>
+        <div style="margin-top: 5px;">
+            <a href="mailto:amarisemtiya@gmail.com" style="color:var(--gold); text-decoration:none;">amarisemtiya@gmail.com</a>
+        </div>
+        
+        <p class="legal-note" style="margin-top: 40px;">
+            AMARISEMTIYA — образовательная и консультативная система. Рекомендации не заменяют медицинские консультации.
+        </p>
+
+        <p style="margin-top: 15px; font-size: 0.8rem;">
+            <a href="terms.pdf" target="_blank" style="color: #666; text-decoration: none;">Общие условия</a>
+        </p>
+
+        <p style="margin-top: 30px; font-size: 0.8rem; opacity: 0.5;">AMARISEMTIYA © 2026. Все права защищены.</p>
+    </footer>
+
+    <div id="cookie-banner">
+        <div class="cookie-content">
+            <h4>Diese Seite verwendet Cookies</h4>
+            <p>Wir verwenden Cookies, um Ihre Erfahrung zu verbessern. Durch die Nutzung der Seite stimmen Sie der Verwendung von Cookies zu.</p>
+            <div class="cookie-btns">
+                <button id="accept-cookies" class="btn-small">Alle akzeptieren</button>
+                <button id="reject-cookies" class="btn-small-outline">Ablehnen</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="floating-buttons">
+        <a href="https://www.instagram.com/amarisemtiya?igsh=aG55eW5nMHM0YWpj" class="float-btn float-ig" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.tiktok.com/@amarisemtiya?_r=1&_t=ZM-931NpCZGA5z" class="float-btn float-tt" target="_blank"><i class="fab fa-tiktok"></i></a>
+        <a href="https://t.me/+YWRw3w1EL5M4Yjdi" class="float-btn float-tg" target="_blank"><i class="fab fa-telegram-plane"></i></a>
+    </div>
+
+    <script>
+        // Reveal Animation
+        window.addEventListener('scroll', reveal);
+        window.addEventListener('load', reveal); 
+        
+        function reveal(){
+            var reveals = document.querySelectorAll('.reveal');
+            for(var i = 0; i < reveals.length; i++){
+                var windowheight = window.innerHeight;
+                var revealtop = reveals[i].getBoundingClientRect().top;
+                var revealpoint = 100;
+                
+                if(revealtop < windowheight - revealpoint){
+                    reveals[i].classList.add('active');
+                }
+            }
+        }
+        
+        setTimeout(function() {
+            var reveals = document.querySelectorAll('.reveal');
+            reveals.forEach(el => el.classList.add('active'));
+        }, 1000);
+
+        // Mobile Menu
+        function toggleMenu() {
+            var nav = document.getElementById('navbar');
+            nav.classList.toggle('active');
+        }
+
+        // Cookie Logic
+        document.addEventListener("DOMContentLoaded", function() {
+            if (!localStorage.getItem("cookieConsent")) {
+                document.getElementById("cookie-banner").style.display = "block";
+            }
+        });
+
+        document.getElementById("accept-cookies").addEventListener("click", function() {
+            localStorage.setItem("cookieConsent", "true");
+            document.getElementById("cookie-banner").style.display = "none";
+        });
+
+        document.getElementById("reject-cookies").addEventListener("click", function() {
+            localStorage.setItem("cookieConsent", "false");
+            document.getElementById("cookie-banner").style.display = "none";
+        });
+    </script>
+
+</body>
+</html>
