@@ -70,6 +70,10 @@
         .divider {
             width: 80px; height: 2px; background: var(--gold); margin: 30px auto;
         }
+        
+        .gold-line {
+             width: 100%; height: 1px; background: linear-gradient(to right, transparent, var(--gold), transparent); margin: 40px 0; opacity: 0.5;
+        }
 
         /* Animation Classes */
         .reveal {
@@ -159,7 +163,7 @@
         .intro { padding: 100px 0; background: url('texture.jpg') center/cover; background-blend-mode: multiply; background-color: rgba(5, 20, 25, 0.97); text-align: center; }
         .intro p { font-size: 1.3rem; max-width: 900px; margin: 0 auto 30px; color: var(--text-muted); }
         
-        /* --- 5 PILLARS GRID (NEW) --- */
+        /* --- 5 PILLARS GRID --- */
         .pillars-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 60px; text-align: left; }
         .pillar-card { 
             background: rgba(255,255,255,0.03); 
@@ -173,28 +177,45 @@
         .pillar-card h4 { color: var(--gold); font-size: 1.4rem; margin-bottom: 15px; }
         .pillar-card p { font-size: 1rem; color: #ccc; line-height: 1.6; }
 
+        /* --- AUDIENCE SECTION --- */
+        .audience-section { padding: 100px 0; background: #081b21; }
+        .audience-intro { text-align: center; max-width: 800px; margin: 0 auto 40px; color: var(--text-muted); font-size: 1.1rem; }
+        .audience-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 40px; }
+        .audience-card { background: rgba(255,255,255,0.02); padding: 30px; border-top: 2px solid var(--gold); transition: 0.3s; }
+        .audience-card:hover { transform: translateY(-5px); background: rgba(255,255,255,0.04); }
+        .aud-icon { font-size: 2.5rem; margin-bottom: 15px; text-align: center; }
+        .audience-card h4 { color: var(--gold); font-size: 1.3rem; margin-bottom: 15px; text-align: center; font-family: var(--font-serif); }
+        .aud-main-desc { font-weight: 500; margin-bottom: 25px; text-align: center; color: #fff; font-size: 1.05rem;}
+        .aud-list { list-style: none; }
+        .aud-list li { margin-bottom: 15px; color: #ccc; font-size: 0.95rem; line-height: 1.6; }
+        .aud-list li span { color: var(--gold); font-weight: bold; }
 
+        .audience-minor-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; margin-top: 40px; max-width: 800px; margin-left: auto; margin-right: auto; }
+        .aud-minor-card { background: rgba(255,255,255,0.02); padding: 20px 30px; border-radius: 4px; display: flex; align-items: center; gap: 20px; border: 1px solid rgba(212, 175, 55, 0.2); }
+        .aud-icon-small { font-size: 2rem; }
+        .aud-minor-card h4 { color: var(--gold); margin-bottom: 5px; font-size: 1.1rem; font-family: var(--font-sans); font-weight: 600; }
+        .aud-minor-card p { font-size: 0.9rem; color: #ccc; margin: 0; line-height: 1.4; }
+
+        /* --- FORMATS --- */
         .formats-section { padding: 100px 0; background: #06181e; }
         .formats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; margin-top: 50px; }
         .format-card { background: var(--bg-card); padding: 40px 30px; border: 1px solid rgba(212, 175, 55, 0.2); text-align: center; transition: 0.3s; display: flex; flex-direction: column; justify-content: space-between; }
         .format-card:hover { border-color: var(--gold); box-shadow: 0 10px 30px rgba(0,0,0,0.3); transform: translateY(-5px); }
         .format-title { color: var(--gold); font-size: 1.4rem; font-family: var(--font-serif); margin-bottom: 15px; }
         
+        /* --- CONSULTATION SECTION (UPDATED) --- */
         .consultation-section { padding: 100px 0; background: #081b21; }
-        .requests-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin: 50px 0; }
-        .req-card { background: rgba(255,255,255,0.02); padding: 30px; border-left: 2px solid var(--gold); }
-        .req-card h4 { color: var(--gold); margin-bottom: 15px; font-size: 1.2rem; }
-        .req-card p { font-size: 0.95rem; color: #ccc; }
-
-        .unique-box { border: 1px solid var(--gold); padding: 40px; margin: 60px 0; background: radial-gradient(circle at center, rgba(212,175,55,0.05), transparent); text-align: center; }
-        
-        .results-list { list-style: none; margin-top: 20px; }
-        .results-list li { margin-bottom: 10px; display: flex; align-items: start; }
-        .results-list li:before { content: '✓'; color: var(--gold); margin-right: 15px; font-weight: bold; }
-
         .process-row { display: flex; flex-wrap: wrap; gap: 50px; align-items: center; margin-top: 60px; }
-        .process-text { flex: 1; min-width: 300px; }
-        .process-img { flex: 1; min-width: 300px; height: 500px; background: url('consultation.jpg') center/cover; border-radius: 4px; box-shadow: 0 20px 50px rgba(0,0,0,0.5); }
+        .process-text { flex: 1; min-width: 300px; background: rgba(5, 20, 25, 0.6); padding: 40px; border-radius: 4px; backdrop-filter: blur(5px); border: 1px solid rgba(212, 175, 55, 0.1); }
+        .process-img { flex: 1; min-width: 300px; height: 650px; background: url('consultation.jpg') center/cover; border-radius: 4px; box-shadow: 0 20px 50px rgba(0,0,0,0.5); }
+        
+        .results-list { list-style: none; margin-top: 25px; }
+        .results-list li { margin-bottom: 15px; display: flex; align-items: start; font-size: 1.05rem; }
+        .results-list li:before { content: '✓'; color: var(--gold); margin-right: 15px; font-weight: bold; }
+        
+        .requests-list { list-style: none; margin-top: 20px; padding-left: 20px; }
+        .requests-list li { margin-bottom: 10px; position: relative; color: #ccc; }
+        .requests-list li:before { content: '•'; color: var(--gold); position: absolute; left: -20px; font-size: 1.2rem; line-height: 1; }
 
         .academy-section { padding: 120px 0; background: linear-gradient(rgba(5,20,25,0.92), rgba(5,20,25,0.85)), url('academy-bg.jpg') center/cover fixed; color: #fff; }
         .academy-block { margin-bottom: 50px; text-align: center; }
@@ -251,9 +272,11 @@
             nav ul { flex-direction: column; }
             .hero h1 { font-size: 2.5rem; }
             .process-row, .author-section { flex-direction: column; }
-            .author-img, .process-img { width: 100%; height: 350px; order: -1; }
-            .pillar-card { min-height: auto; }
+            .author-img, .process-img { width: 100%; height: 400px; order: -1; }
+            .pillar-card, .audience-card { min-height: auto; }
             .btn { width: 100%; margin: 10px 0; }
+            .aud-minor-card { flex-direction: column; text-align: center; }
+            .process-text { padding: 30px 20px; }
         }
     </style>
 </head>
@@ -267,6 +290,7 @@
         <nav id="navbar">
             <ul>
                 <li><a href="#about" onclick="toggleMenu()">Метод</a></li>
+                <li><a href="#audience" onclick="toggleMenu()">Для кого</a></li>
                 <li><a href="#formats" onclick="toggleMenu()">Форматы</a></li>
                 <li><a href="#consultation" onclick="toggleMenu()">Консультация</a></li>
                 <li><a href="#academy" onclick="toggleMenu()" style="color: var(--gold);">Academy</a></li>
@@ -344,6 +368,82 @@
         </div>
     </section>
 
+    <section id="audience" class="audience-section">
+        <div class="container reveal">
+            <h2 class="section-title">Для кого мы создали <span class="gold-text">Amarisemtiya Academy</span></h2>
+            
+            <p class="audience-intro">
+                Мы создали это не для «успешного успеха», а для реальной жизни. Жизни, где есть переезды, стресс, языковые барьеры и поиск себя в новых обстоятельствах.<br>
+                Мы соединяем глубину (работу с состоянием и мышлением) и твердость (практические инструменты для адаптации и роста).
+            </p>
+            
+            <div class="divider"></div>
+            
+            <h3 style="text-align: center; margin-bottom: 40px; margin-top: 40px;">Посмотрите, в какой ситуации находитесь вы сейчас, и узнайте, как мы можем помочь:</h3>
+
+            <div class="audience-grid">
+                <div class="audience-card">
+                    <div class="aud-icon">🏛</div>
+                    <h4>1. ПРОФЕССИОНАЛЫ И БИЗНЕС</h4>
+                    <p class="aud-main-desc">Вы строите карьеру или свое дело, но чувствуете, что работаете на пределе.</p>
+                    <ul class="aud-list">
+                        <li><span>▪️ Клиенты с выгоранием:</span> Те, кто (пока еще) держится, но уже на грани срыва.</li>
+                        <li><span>▪️ Иммигранты и Предприниматели:</span> Кто строит бизнес и профессиональный путь с нуля в новой стране.</li>
+                        <li><span>▪️ Руководители:</span> Кому нужно сохранять устойчивость и принимать сложные решения в кризис.</li>
+                    </ul>
+                </div>
+
+                <div class="audience-card">
+                    <div class="aud-icon">🌍</div>
+                    <h4>2. АДАПТАЦИЯ И НОВАЯ СТРАНА</h4>
+                    <p class="aud-main-desc">Вы физически переехали, но внутренне еще не адаптировались.</p>
+                    <ul class="aud-list">
+                        <li><span>▪️ Изучающие язык:</span> Кому мешает не отсутствие слов, а внутренние блоки и страх говорить.</li>
+                        <li><span>▪️ Украинцы в миграции:</span> Кто проходит сложный путь от первого шока до поиска новой профессиональной идентичности и статуса.</li>
+                        <li><span>▪️ Релоканты и Экспаты:</span> Кто столкнулся с потерей корней, синдромом отложенной жизни или «стеклянным потолком» в чужой стране.</li>
+                    </ul>
+                </div>
+
+                <div class="audience-card">
+                    <div class="aud-icon">👩‍👧‍👦</div>
+                    <h4>3. ЖЕНЩИНЫ И СЕМЬЯ</h4>
+                    <p class="aud-main-desc">Поиск баланса между реализацией, детьми и собой.</p>
+                    <ul class="aud-list">
+                        <li><span>▪️ Родители и Матери-одиночки:</span> Кто разрывается между работой и домом, испытывая постоянное чувство вины.</li>
+                        <li><span>▪️ Женщины-предприниматели:</span> Кто хочет строить бизнес иначе — по-женски, без выгорания и «мужских» гонок на выживание.</li>
+                    </ul>
+                </div>
+
+                <div class="audience-card">
+                    <div class="aud-icon">🆘</div>
+                    <h4>4. ЛЮДИ В КРИЗИСЕ ПЕРЕХОДА</h4>
+                    <p class="aud-main-desc">Когда старая жизнь рухнула, а новая еще не построена.</p>
+                    <ul class="aud-list">
+                        <li><span>▪️ В состоянии трансформации:</span> Развод, увольнение, резкая смена статуса или потеря ориентиров.</li>
+                        <li><span>▪️ Помогающие практики:</span> Психологи, коучи и эзотерики, которым самим нужна профессиональная опора и психогигиена («сапожники без сапог»).</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="audience-minor-grid">
+                <div class="aud-minor-card">
+                    <div class="aud-icon-small">🤦‍♀️🤦</div>
+                    <div>
+                        <h4>Студенты</h4>
+                        <p>Страх экзаменов, давление социума и потерянность.</p>
+                    </div>
+                </div>
+                <div class="aud-minor-card">
+                    <div class="aud-icon-small">👴</div>
+                    <div>
+                        <h4>Люди 50+</h4>
+                        <p>Кто сталкивается с эйджизмом, страхом технологий и ощущением «я устарел».</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section id="formats" class="formats-section">
         <div class="container reveal">
             <h2 class="section-title">Форматы взаимодействия</h2>
@@ -387,27 +487,42 @@
     <section id="consultation" class="consultation-section">
         <div class="container">
             <div class="consultation-intro reveal">
-                <h2 class="section-title">Личная консультация</h2>
+                <h2 class="section-title">Индивидуальная консультация</h2>
                 <p>Когда вам нужна не просто теория, а конкретное решение.</p>
                 <div class="divider"></div>
             </div>
 
             <div class="process-row reveal">
                 <div class="process-text">
-                    <h3 class="gold-text" style="margin-bottom: 20px;">Как это работает</h3>
-                    <p style="margin-bottom: 15px;">
-                        Мы не тратим годы на разговоры. Мы работаем точечно с вашим состоянием и стратегией.
+                    <h3 class="gold-text" style="margin-bottom: 20px;">Как проходит консультация?</h3>
+                    <p style="margin-bottom: 15px; font-size: 1.1rem;">
+                        Мы работаем не с абстрактными темами, а с вашим состоянием, мышлением и текущей жизненной ситуацией.
                     </p>
+                    
+                    <h4 style="margin-top: 30px; margin-bottom: 15px;">В ходе консультации вы получаете:</h4>
                     <ul class="results-list">
-                        <li>Диагностика уровня стресса и выгорания.</li>
-                        <li>Поиск "утечек" энергии в бизнесе или семье.</li>
-                        <li>Работа с мышлением для снятия барьеров.</li>
-                        <li>Построение пошагового плана адаптации и роста.</li>
+                        <li>Ясную картину вашего состояния и причин стресса.</li>
+                        <li>Понимание, где именно и почему вы теряете энергию.</li>
+                        <li>Работа с внутренними блоками и установками.</li>
+                        <li>Конкретный пошаговый план действий и адаптации.</li>
+                        <li>Ощущение опоры, контроля и выход из состояния апатии.</li>
                     </ul>
                     
-                    <h4 style="margin-top: 40px; color: var(--gold);">Готовы вернуть управление своей жизнью?</h4>
-                    <div style="margin-top: 20px;">
-                        <a href="https://forms.gle/WiA6CzrhGCSEj4kw7" class="btn" target="_blank">Записаться на консультацию</a>
+                    <div class="gold-line"></div>
+
+                    <h4 style="margin-bottom: 15px;">С какими запросами чаще всего приходят:</h4>
+                    <ul class="requests-list">
+                        <li>хронический стресс и усталость</li>
+                        <li>выгорание в работе или бизнесе</li>
+                        <li>потеря опоры в эмиграции</li>
+                        <li>сложности с принятием решений и направлением</li>
+                        <li>тревожность и внутреннее напряжение</li>
+                        <li>сложный переходный этап жизни</li>
+                    </ul>
+                    
+                    <div style="margin-top: 50px; text-align: center;">
+                        <a href="https://forms.gle/WiA6CzrhGCSEj4kw7" class="btn" target="_blank" style="width: 100%;">Записаться на индивидуальную консультацию</a>
+                        <p style="font-size: 0.8rem; color: var(--text-muted); margin-top: 10px;">Онлайн · конфиденциально · по предварительной записи</p>
                     </div>
                 </div>
                 <div class="process-img"></div>
