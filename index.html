@@ -155,7 +155,6 @@
         /* --- SECTIONS --- */
         .hero {
             height: 100vh;
-            /* ВАЖНО: Убедитесь, что файл hero-bg.jpg лежит в той же папке */
             background: linear-gradient(to bottom, rgba(5,20,25,0.4), rgba(5,20,25,1)), url('hero-bg.jpg') center/cover;
             display: flex; align-items: center; justify-content: center; text-align: center;
             position: relative;
@@ -184,7 +183,7 @@
         .pillar-card h4 { color: var(--gold); font-size: 1.4rem; margin-bottom: 15px; }
         .pillar-card p { font-size: 1rem; color: #ccc; line-height: 1.6; }
 
-        /* --- AUDIENCE SECTION (NEW) --- */
+        /* --- AUDIENCE SECTION --- */
         .audience-section { padding: 100px 0; background: #081b21; }
         .audience-intro { text-align: center; max-width: 800px; margin: 0 auto 40px; color: var(--text-muted); font-size: 1.1rem; }
         .audience-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 40px; }
@@ -197,12 +196,6 @@
         .aud-list li { margin-bottom: 15px; color: #ccc; font-size: 0.95rem; line-height: 1.6; }
         .aud-list li span { color: var(--gold); font-weight: bold; }
 
-        .audience-minor-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; margin-top: 40px; max-width: 800px; margin-left: auto; margin-right: auto; }
-        .aud-minor-card { background: rgba(255,255,255,0.02); padding: 20px 30px; border-radius: 4px; display: flex; align-items: center; gap: 20px; border: 1px solid rgba(212, 175, 55, 0.2); }
-        .aud-icon-small { font-size: 2rem; }
-        .aud-minor-card h4 { color: var(--gold); margin-bottom: 5px; font-size: 1.1rem; font-family: var(--font-sans); font-weight: 600; }
-        .aud-minor-card p { font-size: 0.9rem; color: #ccc; margin: 0; line-height: 1.4; }
-
         /* --- FORMATS --- */
         .formats-section { padding: 100px 0; background: #06181e; }
         .formats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; margin-top: 50px; }
@@ -214,7 +207,6 @@
         .consultation-section { padding: 100px 0; background: #081b21; }
         .process-row { display: flex; flex-wrap: wrap; gap: 50px; align-items: center; margin-top: 60px; }
         .process-text { flex: 1; min-width: 300px; background: rgba(5, 20, 25, 0.6); padding: 40px; border-radius: 4px; backdrop-filter: blur(5px); border: 1px solid rgba(212, 175, 55, 0.1); }
-        /* ВАЖНО: Убедитесь, что файл consultation.jpg лежит в папке */
         .process-img { flex: 1; min-width: 300px; height: 650px; background: url('consultation.jpg') center/cover; border-radius: 4px; box-shadow: 0 20px 50px rgba(0,0,0,0.5); }
         
         .results-list { list-style: none; margin-top: 25px; }
@@ -228,7 +220,6 @@
         /* --- ACADEMY --- */
         .academy-section { 
             padding: 120px 0; 
-            /* ВАЖНО: Убедитесь, что файл academy-bg.jpg лежит в папке */
             background: linear-gradient(rgba(5,20,25,0.92), rgba(5,20,25,0.85)), url('academy-bg.jpg') center/cover fixed; 
             color: #fff; 
         }
@@ -238,7 +229,6 @@
         /* --- AUTHOR --- */
         .author-section { display: flex; background: #000; flex-wrap: wrap; }
         .author-text { flex: 1; padding: 80px; display: flex; flex-direction: column; justify-content: center; min-width: 300px; }
-        /* ВАЖНО: Убедитесь, что файл author.jpg лежит в папке */
         .author-img { flex: 1; min-height: 600px; background: url('author.jpg') center/cover; min-width: 300px; filter: sepia(10%); }
 
         /* --- FOOTER --- */
@@ -291,7 +281,6 @@
             .author-img, .process-img { width: 100%; height: 400px; order: -1; }
             .pillar-card, .audience-card { min-height: auto; }
             .btn { width: 100%; margin: 10px 0; }
-            .aud-minor-card { flex-direction: column; text-align: center; }
             .process-text { padding: 30px 20px; }
         }
     </style>
@@ -389,7 +378,7 @@
             <h2 class="section-title">Для кого мы создали <span class="gold-text">Amarisemtiya Academy</span></h2>
             
             <p class="audience-intro">
-                Мы создали Amarisemtiya Academy не для «успешного успеха», а для реальной жизни. Жизни, где есть переезды, стресс, языковые барьеры и поиск себя в новых обстоятельствах.<br>
+                Мы создали это не для «успешного успеха», а для реальной жизни. Жизни, где есть переезды, стресс, языковые барьеры и поиск себя в новых обстоятельствах.<br>
                 Мы соединяем глубину (работу с состоянием и мышлением) и твердость (практические инструменты для адаптации и роста).
             </p>
             
@@ -439,23 +428,29 @@
                         <li><span>▪️ Помогающие практики:</span> Психологи, коучи и эзотерики, которым самим нужна профессиональная опора и психогигиена («сапожники без сапог»).</li>
                     </ul>
                 </div>
-            </div>
 
-            <div class="audience-minor-grid">
-                <div class="aud-minor-card">
-                    <div class="aud-icon-small">🤦‍♀️🤦</div>
-                    <div>
-                        <h4>Студенты</h4>
-                        <p>Страх экзаменов, давление социума и потерянность.</p>
-                    </div>
+                <div class="audience-card">
+                    <div class="aud-icon">🤦‍♀️</div>
+                    <h4>5. СТУДЕНТЫ И МОЛОДЕЖЬ</h4>
+                    <p class="aud-main-desc">Страх экзаменов, давление социума и потерянность.</p>
+                    <ul class="aud-list">
+                        <li><span>▪️ Выбор пути:</span> Страх ошибки при выборе профессии и непонимание своих истинных желаний.</li>
+                        <li><span>▪️ Адаптация в вузе:</span> Сложности в общении со сверстниками и языковой барьер в учебе.</li>
+                        <li><span>▪️ Сепарация:</span> Болезненный процесс отделения от родителей в условиях эмиграции.</li>
+                    </ul>
                 </div>
-                <div class="aud-minor-card">
-                    <div class="aud-icon-small">👴</div>
-                    <div>
-                        <h4>Люди 50+</h4>
-                        <p>Кто сталкивается с эйджизмом, страхом технологий и ощущением «я устарел».</p>
-                    </div>
+
+                <div class="audience-card">
+                    <div class="aud-icon">👴</div>
+                    <h4>6. ЛЮДИ 50+</h4>
+                    <p class="aud-main-desc">Кто сталкивается с эйджизмом, страхом технологий и ощущением «я устарел».</p>
+                    <ul class="aud-list">
+                        <li><span>▪️ Эйджизм и работа:</span> Отказы из-за возраста и страх быть невостребованным специалистом.</li>
+                        <li><span>▪️ Технологический барьер:</span> Стресс от цифровизации и ощущения, что мир бежит слишком быстро.</li>
+                        <li><span>▪️ Смена ролей:</span> Переосмысление себя, когда дети выросли, а карьера требует перезагрузки.</li>
+                    </ul>
                 </div>
+
             </div>
         </div>
     </section>
